@@ -7,3 +7,102 @@
         font-size: 12px
         line-height: 14px
         text-transform: uppercase
+.get-access
+    width: 722px
+    &__title
+        display: flex
+        justify-content: center
+        cursor: pointer
+        & span
+            font-size: 16px
+            line-height: 19px
+    &__icon_close, &__icon_open
+        width: 14px
+        height: 14px
+        border: 2px solid $blue
+    &__icon_close
+        transform: rotate(45deg)
+        margin-top: 8px
+        border-bottom: none
+        border-right: none
+        margin-left: 15px
+    &__icon_open
+        transform: rotate(45deg)
+        border-top: none
+        border-left: none
+        margin-left: 15px
+        margin-top: 0px
+    &__desctiption
+        display: none
+        & p
+            margin: 18px 0
+    &__desctiption_active
+        display: block
+
+
+.control-panel
+    &__format
+        position: relative
+        padding-left: 14px
+        &::before
+            content: ''
+            position: absolute
+            height: 25px
+            width: 20px
+            border-left: 1px solid #E1E1E1
+            left: 0
+.dark-text
+    color: $dark-grey
+    display: inline-block
+    font-size: 18px
+.pages
+    &__input
+        width: 55px
+        min-width: 55px
+        height: 27px
+        outline: none
+        border: 1px solid #C4C4C4
+        border-radius: 3px
+        text-align: center
+.entrance-popup
+    background-color: $white
+    padding: 80px 120px
+    border-radius: 11px
+    &__title
+        font-size: 36px
+        line-height: 24px
+        font-weight: normal
+        margin-bottom: 45px
+        display: inline-block
+    &__input-wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+    &__hint
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+        color: $blue
+    &__description
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+    &__input
+        width: 309px
+        max-width: 309px
+        height: 55px
+        border: 1px solid #C4C4C4
+        border-radius: 3px
+        outline: none
+        margin: 10px 0 14px
+        padding: 0 20px
+        font-size: 18px
+        color: $dark-grey
+        
+.password
+    &__description-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%

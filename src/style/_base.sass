@@ -16,13 +16,14 @@ a
   color: inherit
   transition: .25s ease
   text-decoration: none
+  cursor: pointer
 
 .container
   width: 100%
   position: relative
   display: grid
   grid-template-rows: auto
-  grid-template-columns: auto [p-start] 30px [c-start] 1200px [c-end] 30px [p-end] auto
+  grid-template-columns: auto [p-start] 30px [c-start] 1300px [c-end] 30px [p-end] auto
   @include respond-to(xxl)
     grid-template-columns: auto [p-start] 30px [c-start] 1100px [c-end] 30px [p-end] auto
   @include respond-to(xl)
@@ -51,3 +52,21 @@ h4
 p
   font-size: 1rem
   margin: 10px 0
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+span
+  font-size: 1.25rem
+  font-weight: 500
+  line-height: 30px
+
+.button
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: $white
+  background-color: $blue
+  padding: 9px 15px
+  border-radius: 3px
+  display: inline-block
+  cursor: pointer

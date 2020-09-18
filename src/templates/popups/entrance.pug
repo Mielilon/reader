@@ -1,0 +1,16 @@
+.entrance
+    .container
+        .content
+            .entrance-popup
+                span.entrance-popup__title Вход
+                .entrance-popup__input-wrapper
+                    label(for="login").entrance-popup__description Логин или е-mail
+                    input(type="text" required id='login').entrance-popup__input
+                .entrance-popup__input-wrapper
+                    .password__description-wrapper
+                        label(for="password").entrance-popup__description Пароль
+                        a.entrance-popup__hint Забыли пароль?
+                    input(type="password" required id='password').entrance-popup__input
+                .flex.jc-sb.entrance__button-wrapper
+                    input(type="submit" value='Войти').button.entrance__button
+                    a.entrance-popup__hint Зарегистрироваться
