@@ -79,26 +79,10 @@
         flex-direction: column
         align-items: flex-start
         justify-content: center
-    &__hint
-        font-weight: normal
-        font-size: 14px
-        line-height: 16px
-        color: $blue
     &__description
         font-weight: normal
         font-size: 14px
         line-height: 16px
-    &__input
-        width: 309px
-        max-width: 309px
-        height: 55px
-        border: 1px solid #C4C4C4
-        border-radius: 3px
-        outline: none
-        margin: 10px 0 14px
-        padding: 0 20px
-        font-size: 18px
-        color: $dark-grey
         
 .password
     &__description-wrapper
@@ -106,3 +90,67 @@
         align-items: center
         justify-content: space-between
         width: 100%
+
+.input-text
+    width: 309px
+    max-width: 309px
+    height: 55px
+    border: 1px solid #C4C4C4
+    border-radius: 3px
+    outline: none
+    margin: 10px 0 14px
+    padding: 0 20px
+    font-size: 18px
+    color: $dark-grey
+
+.double-button-wrapper
+    display: flex
+    align-items: center
+.double-button
+    padding: 10px 35px
+    background-color: $white
+    outline: none
+    border-radius: 11px
+    border: 2px solid $light-grey
+    color: $light-grey
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    padding-right: 40px
+    cursor: pointer
+    &:nth-child(2)
+        margin-left: -20px
+
+.double-button_active
+    padding-right: 35px
+    border-color: $blue
+    color: $blue
+    z-index: 3
+
+    
+.popup-background
+    position: fixed
+    z-index: 99
+    background-color: $white
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+    overflow: auto
+    top: 80px
+    padding: 67px 37px 20px
+
+.blue-text
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    color: $blue
+.grey-text
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    color: $light-grey
+.normal-text
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+.number-page
+
+.value
