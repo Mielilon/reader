@@ -12,3 +12,69 @@
     &__settings
         display: flex
         align-items: center
+    &__img-description
+        position: relative
+        &:hover
+            &::before
+                z-index: 101
+                content: ''
+                position: absolute
+                top: 50px
+                left: -18px
+                width: auto
+                min-width: 105px
+                text-align: center
+                background-color: white
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15)
+                border-radius: 3px
+                padding: 13px 18px
+                color: $dark-grey
+                
+            
+    &__img-description-1
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Оглавление'
+    &__img-description-2
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Добавить закладку'
+    &__img-description-3
+        &:hover
+            &::before
+                z-index: 101
+                content: 'LMS-ссылки'
+    &__img-description-4
+        &:hover
+            &::before
+                z-index: 101
+                content: '.'
+    &__img-description-5
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Создать полку'    
+    &__img-description-6
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Поиск'
+    &__img-description-7
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Ориентация'
+    &__img-description-8
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Изменить шрифт'    
+    &__img-description-9
+        &:hover
+            &::before
+                z-index: 101
+                content: 'Текст'
+
+        
