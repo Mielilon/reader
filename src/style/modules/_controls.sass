@@ -16,7 +16,6 @@
         position: relative
         &:hover
             &::before
-                z-index: 101
                 content: ''
                 position: absolute
                 top: 50px
@@ -29,52 +28,45 @@
                 border-radius: 3px
                 padding: 13px 18px
                 color: $dark-grey
-                
-            
+        &:active
+            &::before
+                display: none
+                    
     &__img-description-1
         &:hover
             &::before
-                z-index: 101
                 content: 'Оглавление'
     &__img-description-2
         &:hover
             &::before
-                z-index: 101
                 content: 'Добавить закладку'
     &__img-description-3
         &:hover
             &::before
-                z-index: 101
                 content: 'LMS-ссылки'
     &__img-description-4
         &:hover
             &::before
-                z-index: 101
                 content: '.'
     &__img-description-5
         &:hover
             &::before
-                z-index: 101
                 content: 'Создать полку'    
     &__img-description-6
         &:hover
             &::before
-                z-index: 101
                 content: 'Поиск'
     &__img-description-7
         &:hover
             &::before
-                z-index: 101
                 content: 'Ориентация'
     &__img-description-8
         &:hover
             &::before
-                z-index: 101
                 content: 'Изменить шрифт'    
     &__img-description-9
         &:hover
             &::before
-                z-index: 101
                 content: 'Текст'
 
         

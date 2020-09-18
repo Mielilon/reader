@@ -9,8 +9,6 @@ $(".controls__icon").click(function (event) {
   const modalId = `#modal-${modalName}`
   const isModalActive = $(modalId).hasClass('modal_active')
 
-  console.log(modalId);
-
   $(`.modal:not(${modalId})`).removeClass('modal_active')
   $(modalId).toggleClass('modal_active')
 
