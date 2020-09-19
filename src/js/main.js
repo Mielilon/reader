@@ -44,4 +44,3 @@ $(".exit").click(function (event) {
   const enrtance = $('.entrance')
   enrtance.removeClass('entrance__active')
 })
-
