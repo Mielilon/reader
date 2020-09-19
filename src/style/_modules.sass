@@ -9,6 +9,9 @@
         text-transform: uppercase
 .get-access
     width: 722px
+    .icon_close
+        transform: rotate(225deg)
+        margin-top: 0
     &__title
         display: flex
         justify-content: center
@@ -20,8 +23,12 @@
         display: none
         & p
             margin: 18px 0
-    &__desctiption_active
-        display: block
+    &_active
+        .icon_close
+            margin-top: 6px
+            transform: rotate(45deg)
+        .get-access__desctiption
+            display: block
 
 
 .control-panel

@@ -11,9 +11,14 @@ $(".controls__icon").click(function (event) {
   $(`.modal:not(${modalId})`).removeClass('modal_active')
   $(modalId).toggleClass('modal_active')
 
+  $('.controls__icon.icon-active').addClass('hidden')
+  $('.controls__icon:not(.icon-active)').removeClass('hidden')
+
+  console.log(isModalActive);
+
   if(isModalActive) {
-    $(this).parent().children('.icon-active').addClass('hidden')
-    $(this).parent().children(':not(.icon-active)').removeClass('hidden')
+    $(this).parent().children('.icon-active').removeClass('hidden')
+    $(this).parent().children(':not(.icon-active)').addClass('hidden')
   } else {
     $(this).parent().children('.icon-active').removeClass('hidden')
     $(this).parent().children(':not(.icon-active)').addClass('hidden')
@@ -43,4 +48,13 @@ $(".login").click(function (event) {
 $(".exit").click(function (event) {
   const enrtance = $('.entrance')
   enrtance.removeClass('entrance__active')
+})
+
+
+$('.get-access__title').click(function() {
+  $(this).closest('.get-access').toggleClass('get-access_active')
+})
+
+$('.font-wrapper').click(function() {
+  $(this).closest('.font__item').toggleClass('font__item_active')
 })
