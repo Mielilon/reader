@@ -32,3 +32,16 @@ $(".tabs-buttons__item").click(function (event) {
   wrapper.children(`.tabs-content:not([data-tab-content="${tabId}"])`).removeClass('tabs-content_active')
   wrapper.children(`.tabs-content[data-tab-content="${tabId}"]`).toggleClass('tabs-content_active')
 })
+
+const enrtance = $('.entrance')
+
+$(".login").click(function (event) {
+  const enrtance = $('.entrance')
+  enrtance.addClass('entrance__active')
+})
+
+$(".exit").click(function (event) {
+  const enrtance = $('.entrance')
+  enrtance.removeClass('entrance__active')
+})
+

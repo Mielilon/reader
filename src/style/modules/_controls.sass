@@ -69,4 +69,19 @@
             &::before
                 content: 'Текст'
 
-        
+
+@include respond-to(lg)
+    .controls
+        & .content
+            flex-wrap: wrap
+            justify-content: center
+        &__navigation
+            order: 2
+        &__control-panel
+            order: 4
+        &__settings
+            order: 3
+            
+@include respond-to(md)
+    .controls
+        top: 80px

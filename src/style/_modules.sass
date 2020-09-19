@@ -51,6 +51,8 @@
     background-color: $white
     padding: 80px 120px
     border-radius: 11px
+    z-index: 101
+    position: relative
     &__title
         font-size: 36px
         line-height: 24px
@@ -119,6 +121,9 @@
     top: 80px
     padding: 67px 37px 30px
     width: 370px
+@include respond-to(md)
+    .popup-background
+        top: 140px
 
 .blue-text
     font-weight: normal
@@ -134,14 +139,10 @@
     font-weight: normal
     font-size: 14px
     line-height: 16px
-.number-page
-
-.value
 
 .hidden
     display: none
 
-.blue-underline
 
 .checkbox
   position: absolute
@@ -172,17 +173,17 @@
   color: white
 
 
-icon_close, icon_open
+.icon_close, .icon_open
     width: 14px
     height: 14px
     border: 2px solid $blue
-icon_close
+.icon_close
     transform: rotate(45deg)
     margin-top: 8px
     border-bottom: none
     border-right: none
     margin-left: 15px
-icon_open
+.icon_open
     transform: rotate(45deg)
     border-top: none
     border-left: none
@@ -204,3 +205,18 @@ icon_open
                 border-color: $blue
                 color: $blue
                 z-index: 3
+.range
+    appearance: none
+    background-color: #C4C4C4
+    border: none
+    outline: none
+    height: 2px
+    &::-webkit-slider-thumb
+        background: $white
+        cursor: pointer
+        appearance: none
+        width: 18px
+        height: 18px
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
+        border-radius: 50%
+        

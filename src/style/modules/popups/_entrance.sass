@@ -1,6 +1,6 @@
 .entrance
     opacity: 0
-    z-index: -10000
+    z-index: -10
     position: absolute
     & .container
         width: 100%
@@ -18,8 +18,27 @@
         margin-top: 20px
 .entrance__active
     opacity: 1
-    z-index: 10000
+    z-index: 101
     position: fixed
     width: 100%
     height: 100%
     background: rgba(65, 139, 202, 0.9)
+.exit
+    cursor: pointer
+    &::before, &::after
+        position: absolute
+        background-color: $dark-grey
+        content: ''
+        width: 20px
+        height: 2px
+    &::before
+        right: 16px
+        top: 26px
+        transform: rotate(45deg)
+    &::after
+        right: 16px
+        top: 26px
+        transform: rotate(-45deg)
+        
+
+    

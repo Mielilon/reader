@@ -3,8 +3,20 @@
         .content
             .popup-background
                 .search-popup
-                    input.input-text.search__input(type="text" placeholder='Полка 2')
+                    input.input-text.search__input(type="text" placeholder='Введите запрос')
                     .search-wrapper.m-t-16
                         input.checkbox(type="checkbox" id="exact-search") 
                         label.checkbox-label(for="exact-search") Точный поиск
-                    input(type="button" value='Искать').button.search__button.m-t-16
+                    .flex.m-t-16
+                        input(type="button" value='Искать').button.search__button
+                        p.search__clean.blue-text Очистить
+                    .search-wrapper.m-t-24
+                        .search__item.flex
+                            p.grey-text Стр 5
+                            p.normal-text ... фрезерования коробленой п...
+                        .search__item.flex.m-t-10
+                            p.grey-text Стр 5
+                            p.normal-text ... фрезерования коробленой п...
+                        .search__item.flex.m-t-10
+                            p.grey-text Стр 5
+                            p.normal-text ... фрезерования коробленой п...
