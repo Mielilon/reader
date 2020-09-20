@@ -85,3 +85,14 @@
 @include respond-to(md)
     .controls
         top: 80px
+
+@include respond-to(sm)
+    .controls
+        top: 60px
+        & .content
+            flex-wrap: nowrap
+            overflow-y: scroll
+            margin: 0 15px 0 0
+        &__control-panel
+            display: none
+            

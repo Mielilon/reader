@@ -62,4 +62,19 @@
         cursor: pointer
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
         z-index: 10
+    &__full-screen_white
+        display: none
         
+@include respond-to(md)
+    .reader-controls
+        &__closer, &__next, &__left, &__farther, &__full-screen
+            display: none
+        &__icon
+            background-color: $blue
+        &__full-screen_white
+            display: block
+        &__right
+            right: 20px
+
+            
+

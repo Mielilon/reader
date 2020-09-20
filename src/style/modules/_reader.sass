@@ -1,5 +1,4 @@
 .reader
-    width: 100%
     position: relative
     &__page
         background-color: $white
@@ -18,4 +17,22 @@
         top: 40px 
         & .content
             padding-right: 20px
+@include respond-to(sm)
+    .reader
+        top: 0px 
+        & .content
+            padding-right: 0
+        &__page
+            margin: 0 
+            padding: 20px 20px 20px  
+        &__info
+            column-count: 1
+            column-gap: 0
+            font-size: 14px
+    .first-page
+        position: relative
+        top: 120px
+        margin: 0
+        margin-bottom: 120px
+
         
