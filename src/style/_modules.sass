@@ -30,6 +30,9 @@
         .get-access__desctiption
             display: block
 
+@include respond-to(md)
+    .get-access
+        width: auto
 
 .control-panel
     &__format
@@ -75,7 +78,6 @@
         font-weight: normal
         font-size: 14px
         line-height: 16px
-        
 .password
     &__description-wrapper
         display: flex
@@ -131,7 +133,10 @@
 @include respond-to(md)
     .popup-background
         top: 140px
-
+@include respond-to(sm)
+    .popup-background
+        top: 110px
+        width: 100% !important
 .blue-text
     font-weight: normal
     font-size: 14px
@@ -226,4 +231,25 @@
         height: 18px
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
         border-radius: 50%
-        
+@include respond-to(md)
+    .entrance-popup
+        padding: 40px 50px
+@include respond-to(sm)
+    .entrance-popup
+        background-color: transparent
+        padding: 40px 0
+        color: $white
+        &__link
+            color: $white
+            text-decoration: underline
+    .input-text
+        width: 270px
+    .entrance
+        &__button-wrapper
+            flex-direction: column
+            width: 100%
+            align-items: start !important
+        &__button
+            background-color: transparent
+            border: 2px solid $white !important
+            margin-bottom: 10px

@@ -64,8 +64,12 @@
         z-index: 10
     &__full-screen_white
         display: none
-        
-@include respond-to(md)
+@include respond-to(md)  
+    .reader-controls
+        &__left
+            left: 30px
+
+@include respond-to(sm)
     .reader-controls
         &__closer, &__next, &__left, &__farther, &__full-screen
             display: none

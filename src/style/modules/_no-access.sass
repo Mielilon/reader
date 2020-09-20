@@ -10,3 +10,10 @@
         padding: 22px 107px
         background-color: $white
         border-bottom: 1px solid #EBEBEB
+@include respond-to(md)
+    .no-access
+        margin-top: 50px
+        & .content
+            margin: 0px auto 50px
+        &__item
+            padding: 22px 10px

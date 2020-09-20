@@ -3,7 +3,7 @@
     &__page
         background-color: $white
         width: 730px
-        max-height: 911px
+        height: 911px
         margin: 0 auto 31px
         padding: 52px 80px 26px
 
@@ -17,18 +17,24 @@
         top: 40px 
         & .content
             padding-right: 20px
+@include respond-to(md)
+    .reader
+        & .content
+            padding-right: 0
+        &__page
+            width: auto
+            height: auto
+            margin: 0 
+            padding: 20px 20px 20px  
+            
 @include respond-to(sm)
     .reader
         top: 0px 
         & .content
             padding-right: 0
         &__page
-            margin: 0 
-            padding: 20px 20px 20px  
-        &__info
-            column-count: 1
-            column-gap: 0
-            font-size: 14px
+            width: 100%
+
     .first-page
         position: relative
         top: 120px

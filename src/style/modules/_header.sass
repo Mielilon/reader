@@ -37,10 +37,8 @@
             display: none
         &__little-logo
             display: block
-@media screen and ( max-width:  400px)
-    .header 
         &__info-wrapper
-            width: 20%
+            max-width: 30%
         &__authorization 
             white-space: nowrap
             position: absolute
@@ -53,9 +51,17 @@
             white-space: nowrap
             overflow: hidden
             text-overflow: ellipsis
-            width: 45%
+            width: 60%
             font-size: 11px
             line-height: 13px
             margin-left: 5px
         &__back
             font-size: 11px
+@media screen and ( max-width: 360px )
+    .book
+        &__name
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            width: 40%
+    
