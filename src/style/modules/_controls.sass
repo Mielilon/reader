@@ -7,6 +7,8 @@
     top: 60px
     z-index: 100
     color: $light-grey
+    &__img-wpapper
+        cursor: pointer
     &__icon
         cursor: pointer
     &__settings
@@ -88,11 +90,14 @@
 
 @include respond-to(sm)
     .controls
+        overflow-y: scroll
         top: 60px
         & .content
             flex-wrap: nowrap
-            overflow-y: scroll
-            margin: 0 10px
+            width: 100%
+            padding: 0 10px
         &__control-panel
             display: none
+        &__icon
+            width: 20px
             
