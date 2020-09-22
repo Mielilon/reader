@@ -23,6 +23,27 @@
     width: 100%
     height: 100%
     background: rgba(65, 139, 202, 0.9)
+.entrance-popup
+    background-color: $white
+    padding: 80px 120px
+    border-radius: 11px
+    z-index: 101
+    position: relative
+    &__title
+        font-size: 36px
+        line-height: 24px
+        font-weight: normal
+        margin-bottom: 45px
+        display: inline-block
+    &__input-wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+    &__description
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
 .exit
     cursor: pointer
     &::before, &::after
@@ -40,3 +61,26 @@
         top: 26px
         transform: rotate(-45deg)
         
+@include respond-to(md)
+    .entrance-popup
+        padding: 40px 50px
+@include respond-to(sm)
+    .entrance-popup
+        background-color: transparent
+        padding: 40px 0
+        color: $white
+        &__link
+            color: $white
+            text-decoration: underline
+    .input-text
+        width: 250px
+    .entrance
+        &__button-wrapper
+            flex-direction: column
+            width: 100%
+            align-items: start !important
+        &__button
+            background-color: transparent
+            border: 2px solid $white !important
+            margin-bottom: 10px
+    

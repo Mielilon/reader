@@ -72,7 +72,17 @@
             &::before
                 content: 'Текст'
 
-
+.control-panel
+    &__format
+        position: relative
+        padding-left: 14px
+        &::before
+            content: ''
+            position: absolute
+            height: 25px
+            width: 20px
+            border-left: 1px solid #E1E1E1
+            left: 0
 @include respond-to(lg)
     .controls
         & .content
@@ -88,6 +98,10 @@
 @include respond-to(md)
     .controls
         top: 80px
+        &__img-description
+            &:hover
+                &::before
+                    display: none
 
 @include respond-to(sm)
     .controls
@@ -102,3 +116,4 @@
         &__icon
             width: 20px
             margin-left: 16px
+        

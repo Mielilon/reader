@@ -1,50 +1,5 @@
 // Modules
-.book
-    &__back
-        font-family: FontAwesome
-    &__name
-        margin-left: 16px
-        font-size: 12px
-        line-height: 14px
-        text-transform: uppercase
-.get-access
-    width: 722px
-    .icon_close
-        transform: rotate(225deg)
-        margin-top: 0
-    &__title
-        display: flex
-        justify-content: center
-        cursor: pointer
-        & span
-            font-size: 16px
-            line-height: 19px
-    &__desctiption
-        display: none
-        & p
-            margin: 18px 0
-    &_active
-        .icon_close
-            margin-top: 6px
-            transform: rotate(45deg)
-        .get-access__desctiption
-            display: block
 
-@include respond-to(md)
-    .get-access
-        width: auto
-
-.control-panel
-    &__format
-        position: relative
-        padding-left: 14px
-        &::before
-            content: ''
-            position: absolute
-            height: 25px
-            width: 20px
-            border-left: 1px solid #E1E1E1
-            left: 0
 .dark-text
     color: $dark-grey
     display: inline-block
@@ -60,27 +15,7 @@
         &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
             -webkit-appearance: none
             margin: 0
-.entrance-popup
-    background-color: $white
-    padding: 80px 120px
-    border-radius: 11px
-    z-index: 101
-    position: relative
-    &__title
-        font-size: 36px
-        line-height: 24px
-        font-weight: normal
-        margin-bottom: 45px
-        display: inline-block
-    &__input-wrapper
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        justify-content: center
-    &__description
-        font-weight: normal
-        font-size: 14px
-        line-height: 16px
+
 .password
     &__description-wrapper
         display: flex
@@ -133,13 +68,15 @@
     top: 80px
     padding: 67px 37px 30px
     width: 370px
-@include respond-to(md)
+@include respond-to(lg)
     .popup-background
         top: 140px
 @include respond-to(sm)
     .popup-background
         top: 110px
         width: 100% !important
+        overflow-y: scroll
+        padding-bottom: 200px
 .blue-text
     font-weight: normal
     font-size: 14px
@@ -234,28 +171,7 @@
         height: 18px
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
         border-radius: 50%
-@include respond-to(md)
-    .entrance-popup
-        padding: 40px 50px
 @include respond-to(sm)
-    .entrance-popup
-        background-color: transparent
-        padding: 40px 0
-        color: $white
-        &__link
-            color: $white
-            text-decoration: underline
-    .input-text
-        width: 250px
-    .entrance
-        &__button-wrapper
-            flex-direction: column
-            width: 100%
-            align-items: start !important
-        &__button
-            background-color: transparent
-            border: 2px solid $white !important
-            margin-bottom: 10px
     .range
         height: 3px
         &::-webkit-slider-thumb

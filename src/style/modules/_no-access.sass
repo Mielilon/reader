@@ -1,5 +1,6 @@
 .no-access
     width: 100%
+    z-index: 0
     & .content
         position: relative
         margin: 0px auto 117px
@@ -10,10 +11,37 @@
         padding: 22px 107px
         background-color: $white
         border-bottom: 1px solid #EBEBEB
+.get-access
+    width: 722px
+    .icon_close
+        transform: rotate(225deg)
+        margin-top: 0
+    &__title
+        display: flex
+        justify-content: center
+        cursor: pointer
+        & span
+            font-size: 16px
+            line-height: 19px
+    &__desctiption
+        display: none
+        & p
+            margin: 18px 0
+    &_active
+        .icon_close
+            margin-top: 6px
+            transform: rotate(45deg)
+        .get-access__desctiption
+            display: block
+
 @include respond-to(md)
+    .get-access
+        width: 100%
+
     .no-access
         margin-top: 50px
         & .content
-            margin: 0px auto 50px
+            margin: 0 0 50px
+            padding: 0
         &__item
             padding: 22px 10px

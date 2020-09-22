@@ -6,8 +6,11 @@
         display: flex
         justify-content: space-between
         align-items: flex-start
+    &__left
+        z-index: 10
     &__right
         right: 0
+        z-index: 10
 
     &__pre, &__next
         width: 40px
@@ -61,7 +64,6 @@
         border-radius: 11px
         cursor: pointer
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
-        z-index: 10
     &__full-screen_white
         display: none
 @include respond-to(md)  
@@ -79,7 +81,6 @@
             display: block
         &__right
             right: 20px
-            z-index: 103
 
             
 
