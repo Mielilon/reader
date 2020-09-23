@@ -17,7 +17,7 @@
         height: 40px
         position: relative
         border: 2px solid $blue
-        border-radius: 11px
+        border-radius: 12px
         cursor: pointer
         z-index: 90
         &:hover
@@ -68,17 +68,17 @@
         display: none
 @include respond-to(md)  
     .reader-controls
-        &__left
-            left: 30px
-
-@include respond-to(sm)
-    .reader-controls
         &__closer, &__next, &__left, &__farther, &__full-screen
             display: none
         &__icon
             background-color: $blue
+        &__panel
+            height: 40vh
+            margin-top: 0
+            justify-content: center
         &__full-screen_white
             display: block
+            top: 300px
         &__right
             right: 20px
 

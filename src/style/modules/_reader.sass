@@ -19,26 +19,23 @@
             padding-right: 20px
 @include respond-to(md)
     .reader
-        & .content
-            padding-right: 0
-        &__page
-            width: auto
-            height: auto
-            margin: 0 
-            padding: 20px 20px 20px  
-            
-@include respond-to(sm)
-    .reader
-        top: 0px 
+        top: 0
         & .content
             padding-right: 0
         &__page
             width: 100%
-
+            height: auto
+            margin: 0 
+            padding: 40px 30px 20px  
     .first-page
         position: relative
-        top: 120px
+        top: 100px
         margin: 0
-        margin-bottom: 120px
+        margin-bottom: 100px
+@include respond-to(sm)
+    .reader
+        &__info
+            column-count: 1
+            column-gap: 0
 
         

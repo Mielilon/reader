@@ -31,7 +31,7 @@ a
   @include respond-to(lg)
     grid-template-columns: auto [p-start] 30px [c-start] 660px [c-end] 30px [p-end] auto
   @include respond-to(md)
-    grid-template-columns: auto [p-start] 30px [c-start] 480px [c-end] 30px [p-end] auto
+    grid-template-columns: [p-start] 0 [c-start] auto [c-end] 0 [p-end]
   @include respond-to(sm)
     grid-template-columns: [p-start] 0 [c-start] auto [c-end] 0 [p-end]
   &>.content 

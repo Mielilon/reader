@@ -1,13 +1,13 @@
 .header
     background-color: $blue
     color: #ffffff
-    padding: 17px
+    padding: 10px
     position: fixed
     width: 100%
     z-index: 100
     &__logo
-        width: 107px
-        height: 26px
+        width: 190px
+
     &__little-logo
         height: 26px
         display: none
@@ -29,16 +29,6 @@
     .header 
         & .content
             display: flex
-            flex-direction: column-reverse
-            align-items: flex-end
-        &__authorization
-            margin: 0 5px 10px
-
-
-@include respond-to(sm)
-    .header 
-        & .content
-            display: flex
             flex-direction: row
             align-items: center
         &__logo
@@ -49,27 +39,24 @@
             max-width: 30%
         &__authorization 
             white-space: nowrap
-            position: absolute
-            right: 0
             font-size: 11px
             line-height: 13px
             margin: 0
+            position: absolute
+            right: 0
     .book
+        width: 80%
         &__name
             white-space: nowrap
             overflow: hidden
             text-overflow: ellipsis
-            width: 60%
             font-size: 11px
             line-height: 13px
             margin-left: 5px
         &__back
             font-size: 11px
-@media screen and ( max-width: 360px )
-    .book
-        &__name
-            white-space: nowrap
-            overflow: hidden
-            text-overflow: ellipsis
-            width: 40%
+
+
+
+            
     
