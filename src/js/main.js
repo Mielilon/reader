@@ -12,7 +12,7 @@ $(".controls__icon").click(function (event) {
   $(modalId).toggleClass('modal_active')
 
   $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
-  // $(this).parent().removeClass('hidden')
+
   if(!isModalActive) {
     $(this).parent().addClass('controls__img-wpapper_active')
   }
@@ -67,3 +67,11 @@ $(".header__name").click(function (event) {
 $('#save-icon').click(function() {
   $(".first-page>.saved-icon, .reader__page>.saved-icon").addClass('saved-icon_active')
 })
+
+$(document).on('click',function (e) {
+  if ($(e.target).closest('.modal.modal_active').length ||
+  $(e.target).closest('.controls__icon').length) return;
+
+  $('.modal.modal_active').removeClass('modal_active')
+  $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
+ });
