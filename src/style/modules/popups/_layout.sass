@@ -5,10 +5,20 @@
         cursor: pointer
     &-wrapper:not(:first-child)
         margin-top: 34px
+    &-wrapper
+        &:hover
+            color: $blue
+            .layout__img
+                rect
+                    fill: $blue
+                path
+                    stroke: $blue
     &__img
-        width: 42px
+        width: 41px
+        height: 62px
     &__little-img
-        width: 30px
+        width: 31px
+        height: 42px
         margin-left: 3px
 @include respond-to(md)
     .layout

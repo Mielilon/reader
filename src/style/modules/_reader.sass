@@ -12,13 +12,18 @@
         column-gap: 40px
         font-size: 14px
         line-height: 24px
+.first-page
+    position: relative
+    margin-top: 160px
 
+
+//media
 @include respond-to(lg)
     .reader
         top: 40px 
         &__page
             width: 100%
-@include respond-to(md)
+@include respond-to(xs)
     .reader
         top: 0
         & .content
@@ -33,7 +38,7 @@
         top: 100px
         margin: 0
         margin-bottom: 100px
-@include respond-to(sm)
+@include respond-to(xs)
     .reader
         &__info
             column-count: 1

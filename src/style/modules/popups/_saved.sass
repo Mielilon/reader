@@ -11,15 +11,25 @@
             width: 250px
             white-space: nowrap
             overflow: hidden
+        &__img
+            margin-top: 10px
+            display: none
         &__item
             border-bottom: 1px solid #E5E5E5
             margin-bottom: 12px
-        
+            cursor: pointer
+            display: flex
+            align-items: flex-start
+            &:hover .saved-info__img
+                display: block
+            &:hover .saved-info__text
+                width: 220px
 
 .contents-info
     margin-top: 18px
     &__item
         margin-bottom: 25px
+        cursor: pointer
     &__text
         padding-left: 20px
         position: relative
@@ -29,6 +39,7 @@
         margin-left: 40px
     &__description
         margin-top: 24px
+        cursor: pointer
 .plus  
     position: absolute
     left: 0

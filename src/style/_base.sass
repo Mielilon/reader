@@ -23,16 +23,20 @@ a
   position: relative
   display: grid
   grid-template-rows: auto
-  grid-template-columns: auto [p-start] 30px [c-start] 1300px [c-end] 30px [p-end] auto
+  grid-template-columns: auto [p-start] 30px [c-start] 1920px [c-end] 30px [p-end] auto
+  @include respond-to(xxxl)
+  grid-template-columns: auto [p-start] 30px [c-start] 1500px [c-end] 30px [p-end] auto
   @include respond-to(xxl)
     grid-template-columns: auto [p-start] 30px [c-start] 1100px [c-end] 30px [p-end] auto
   @include respond-to(xl)
     grid-template-columns: auto [p-start] 30px [c-start] 900px [c-end] 30px [p-end] auto
   @include respond-to(lg)
-    grid-template-columns: auto [p-start] 30px [c-start] 660px [c-end] 30px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] 700px [c-end] 30px [p-end] auto
   @include respond-to(md)
-    grid-template-columns: [p-start] 0 [c-start] auto [c-end] 0 [p-end]
+    grid-template-columns: auto [p-start] 15px [c-start] 600px [c-end] 15px [p-end] auto
   @include respond-to(sm)
+    grid-template-columns: [p-start] 20px [c-start] 520px [c-end] 20px [p-end]
+  @include respond-to(xs)
     grid-template-columns: [p-start] 0 [c-start] auto [c-end] 0 [p-end]
   &>.content 
     grid-column: c-start/c-end
@@ -72,3 +76,4 @@ span
   cursor: pointer
   border: none
   outline: none
+

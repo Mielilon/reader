@@ -60,11 +60,11 @@ $('.font-wrapper').click(function() {
 $(".registration").click(function (event) {
   const authorization = $('.header__authorization')
   const name = $('.header__name')
-  authorization.addClass('header__authorization_hidden')
-  name.addClass('header__name_active')
+  authorization.toggleClass('hidden')
+  name.toggleClass('hidden')
 })
 
 $(".header__name").click(function (event) {
   const settings = $('.header__settings')
-  settings.toggleClass('header__settings_active')
+  settings.toggleClass('hidden')
 })

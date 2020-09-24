@@ -1,79 +1,11 @@
 // Modules
 
+
+//text
 .dark-text
     color: $dark-grey
     display: inline-block
     font-size: 18px
-.num-input
-        width: 55px
-        min-width: 55px
-        height: 27px
-        outline: none
-        border: 1px solid #C4C4C4
-        border-radius: 3px
-        text-align: center
-        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
-            -webkit-appearance: none
-            margin: 0
-
-.password
-    &__description-wrapper
-        display: flex
-        align-items: center
-        justify-content: space-between
-        width: 100%
-
-.input-text
-    width: 310px
-    height: 55px
-    border: 1px solid #C4C4C4
-    border-radius: 3px
-    outline: none
-    margin: 10px 0 14px
-    padding: 0 20px
-    font-size: 18px
-    color: $dark-grey
-
-.double-button-wrapper
-    display: flex
-    align-items: center
-.double-button
-    padding: 10px 35px
-    background-color: $white
-    outline: none
-    border-radius: 11px
-    border: 2px solid $light-grey
-    color: $light-grey
-    font-weight: 500
-    font-size: 14px
-    line-height: 24px
-    padding-right: 40px
-    cursor: pointer
-    &:nth-child(2)
-        margin-left: -20px
-
-.double-button_active
-    padding-right: 35px
-    border-color: $blue
-    color: $blue
-    z-index: 3
-
-    
-.popup-background
-    position: fixed
-    z-index: 99
-    background-color: $white
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
-    overflow: auto
-    top: 80px
-    padding: 67px 37px 30px
-    width: 370px
-
-@include respond-to(md)
-    .popup-background
-        top: 100px
-        width: 100% !important
-        max-height: calc(100vh - 109px)
 .blue-text
     font-weight: normal
     font-size: 14px
@@ -89,9 +21,29 @@
     font-size: 14px
     line-height: 16px
 
-.hidden
-    display: none
+//inputs
+.num-input
+        width: 55px
+        min-width: 55px
+        height: 27px
+        outline: none
+        border: 1px solid #C4C4C4
+        border-radius: 3px
+        text-align: center
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
 
+.input-text
+    width: 310px
+    height: 55px
+    border: 1px solid #C4C4C4
+    border-radius: 3px
+    outline: none
+    margin: 10px 0 14px
+    padding: 0 20px
+    font-size: 18px
+    color: $dark-grey
 
 .checkbox
   position: absolute
@@ -121,7 +73,70 @@
   font-family: $fa
   color: white
 
+.range
+    appearance: none
+    background-color: #C4C4C4
+    border: none
+    outline: none
+    height: 2px
+    &::-webkit-slider-thumb
+        background: $white
+        cursor: pointer
+        appearance: none
+        width: 18px
+        height: 18px
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
+        border-radius: 50%
 
+
+
+
+//buttons
+.double-button-wrapper
+    display: flex
+    align-items: center
+.double-button
+    padding: 10px 35px
+    background-color: $white
+    outline: none
+    border-radius: 11px
+    border: 2px solid $light-grey
+    color: $light-grey
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    padding-right: 40px
+    cursor: pointer
+    &:nth-child(2)
+        margin-left: -20px
+.double-button_active
+    padding-right: 35px
+    border-color: $blue
+    color: $blue
+    z-index: 3
+
+
+
+//backgrounds
+.popup-background
+    position: fixed
+    z-index: 99
+    background-color: $white
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+    overflow: auto
+    top: 80px
+    padding: 67px 37px 30px
+    width: 370px
+
+
+
+//hidden
+.hidden
+    display: none !important
+
+
+
+//state
 .loading
     position: absolute
     width: 70px
@@ -140,6 +155,39 @@
         transform: rotate(0deg)
     100% 
         transform: rotate(360deg)
+
+.double-page_active
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    justify-content: center
+    grid-gap: 20px
+    position: relative
+    width: 100%
+    margin-top: 170px
+
+    & .first-page
+        top: 0
+        margin-bottom: 0
+    &  .reader__page
+        width: 100%
+        height: auto
+        margin: 0
+.tabs
+    &-content
+        display: none
+        &_active
+            display: block
+    &-buttons
+        &__item
+            &_active
+                padding-right: 35px
+                border-color: $blue
+                color: $blue
+                z-index: 3
+
+                
+//icons
 .saved-icon
     position: absolute
     width: 44px
@@ -155,12 +203,14 @@
     width: 14px
     height: 14px
     border: 2px solid $blue
+
 .icon_close
     transform: rotate(45deg)
     margin-top: 8px
     border-bottom: none
     border-right: none
     margin-left: 15px
+    
 .icon_open
     transform: rotate(45deg)
     border-top: none
@@ -168,35 +218,18 @@
     margin-left: 15px
     margin-top: 0px
 
-.tabs
-    &-wrapper
 
-    &-content
-        display: none
-        &_active
-            display: block
 
-    &-buttons
-        &__item
-            &_active
-                padding-right: 35px
-                border-color: $blue
-                color: $blue
-                z-index: 3
-.range
-    appearance: none
-    background-color: #C4C4C4
-    border: none
-    outline: none
-    height: 2px
-    &::-webkit-slider-thumb
-        background: $white
-        cursor: pointer
-        appearance: none
-        width: 18px
-        height: 18px
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
-        border-radius: 50%
+
+
+
+//media
+
+@include respond-to(md)
+    .popup-background
+        top: 100px
+        width: 100% !important
+        max-height: calc(100vh - 109px)
 @include respond-to(sm)
     .range
         height: 3px

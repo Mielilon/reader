@@ -1,13 +1,18 @@
 // Variables and mixins
-
-$small: 500px
-$medium: 768px
-$large: 992px
+$xsmall: 550px
+$small: 700px
+$medium: 900px
+$large: 1000px
 $xlarge: 1200px
-$xxlarge: 1400px
+$xxlarge: 1600px
+$xxxlarge: 1800px
 
 @mixin respond-to($media)
-  @if $media == sm
+  @if $media == xs
+    @media only screen and (max-width: $xsmall - 1)
+      @content
+
+  @else if $media == sm
     @media only screen and (max-width: $small - 1)
       @content
 
@@ -26,7 +31,10 @@ $xxlarge: 1400px
   @else if $media == xxl
     @media only screen and (max-width: $xxlarge - 1)
       @content
-
+      
+  @else if $media == xxxl
+    @media only screen and (max-width: $xxxlarge - 1)
+      @content
 
 @mixin shadow($level)
   @if $level == 1
@@ -43,6 +51,7 @@ $xxlarge: 1400px
   
   @else if $level == 5
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+
 
 //colors
 $blue: #418BCA

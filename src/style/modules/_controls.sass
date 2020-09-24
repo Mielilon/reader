@@ -11,6 +11,20 @@
         cursor: pointer
     &__icon
         cursor: pointer
+    &__img-wpapper:hover
+        svg
+            rect
+                fill: $blue
+    &__img-wpapper:hover
+        svg
+            path
+                stroke: $blue
+    &__img-wpapper:hover
+        .blue-f
+            fill: $blue
+        .blue-s
+            stroke: $blue
+    
     &__settings
         display: flex
         align-items: center
@@ -69,6 +83,7 @@
                 content: 'Изменить шрифт'    
     &__img-description-9
         &:hover
+            color: $blue
             &::before
                 content: 'Текст'
 
@@ -83,6 +98,11 @@
             width: 20px
             border-left: 1px solid #E1E1E1
             left: 0
+
+
+.scale__interest
+    color: #4B4B4B
+
 @include respond-to(lg)
     .controls
         & .content

@@ -1,6 +1,6 @@
 .header
     .container
-        .content.flex.jc-sb
+        .content
             .header__info-wrapper.flex
                 img.header__logo.logo(src="./img/logo.png", alt="")
                 img.header__little-logo.little-logo(src="./img/little-logo.png", alt="")
@@ -10,8 +10,8 @@
             .header__authorization
                 a.login(href="#") Вход /&nbsp;
                 a.registration(href="#") Регистрация
-            p.header__name  Имя Фамилия
-.header__settings.popup-background
+            p.header__name.hidden  Имя Фамилия
+.header__settings.hidden.settings.popup-background
     a.settings__info(href="#") Настройки
     a.settings__info(href="#") Выйти
 

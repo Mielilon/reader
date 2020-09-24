@@ -5,24 +5,29 @@
     position: fixed
     width: 100%
     z-index: 100
+    & .content
+        display: flex
+        align-items: center
+        justify-content: space-between
     &__logo
         width: 190px
-
     &__little-logo
         height: 26px
         display: none
     &__book
         margin-left: 34px
+        white-space: nowrap
+
+
     &__authorization, &__name
         font-size: 14px
         line-height: 16px
-    &__authorization_hidden
-        display: none
     &__name
         display: none
         cursor: pointer
         position: relative
         user-select: none
+        padding-right: 15px
         &::before
             content: ''
             position: absolute
@@ -34,12 +39,7 @@
             border-top: none
             border-left: none
             transform: rotate(45deg)
-    &__name_active
-        display: block
-        padding-right: 15px
     &__settings
-        display: none
-    &__settings_active
         display: block
         position: absolute
         width: auto
@@ -49,11 +49,11 @@
         padding: 20px
         border-radius: 3px
         z-index: 106
-        
-.settings__info
-    display: block
-    padding: 10px 20px
 
+.settings        
+    &__info
+        display: block
+        padding: 10px 20px
 
 .book
     cursor: pointer
@@ -64,8 +64,13 @@
         font-size: 12px
         line-height: 14px
         text-transform: uppercase
+        overflow: hidden
+        text-overflow: ellipsis
 
-@include respond-to(md)
+
+
+//media
+@include respond-to(sm)
     .header 
         & .content
             display: flex
