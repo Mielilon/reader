@@ -14,7 +14,10 @@ $(".controls__icon").click(function (event) {
   $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
 
   if(!isModalActive) {
+    // тут добавляем
     $(this).parent().addClass('controls__img-wpapper_active')
+  } else {
+    // тут убираем
   }
 })
 
@@ -74,4 +77,5 @@ $(document).on('click',function (e) {
 
   $('.modal.modal_active').removeClass('modal_active')
   $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
+  // и тут убираем
  });
