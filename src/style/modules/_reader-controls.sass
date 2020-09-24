@@ -66,15 +66,21 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
     &__full-screen_white
         display: none
+@include respond-to(lg) 
+    .reader-controls
+        &__left
+            left: 50px
 @include respond-to(md)  
     .reader-controls
+        top: 120px
         &__closer, &__next, &__left, &__farther, &__full-screen
             display: none
         &__icon
             background-color: $blue
         &__panel
-            height: 40vh
+            height: calc( 100vh - 120px ) 
             margin-top: 0
+            top: 0
             justify-content: center
         &__full-screen_white
             display: block

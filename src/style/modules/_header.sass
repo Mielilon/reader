@@ -13,10 +13,50 @@
         display: none
     &__book
         margin-left: 34px
-    &__authorization
+    &__authorization, &__name
         font-size: 14px
         line-height: 16px
+    &__authorization_hidden
+        display: none
+    &__name
+        display: none
+        cursor: pointer
+        position: relative
+        user-select: none
+        &::before
+            content: ''
+            position: absolute
+            width: 8px
+            height: 8px
+            border: 2px solid $white
+            top: 1px
+            right: 0
+            border-top: none
+            border-left: none
+            transform: rotate(45deg)
+    &__name_active
+        display: block
+        padding-right: 15px
+    &__settings
+        display: none
+    &__settings_active
+        display: block
+        position: absolute
+        width: auto
+        right: 8%
+        top: 50px
+        color: $dark-grey
+        padding: 20px
+        border-radius: 3px
+        z-index: 106
+        
+.settings__info
+    display: block
+    padding: 10px 20px
+
+
 .book
+    cursor: pointer
     &__back
         font-family: FontAwesome
     &__name

@@ -14,8 +14,6 @@ $(".controls__icon").click(function (event) {
   $('.controls__icon.icon-active').addClass('hidden')
   $('.controls__icon:not(.icon-active)').removeClass('hidden')
 
-  console.log(isModalActive);
-
   if(isModalActive) {
     $(this).parent().children('.icon-active').removeClass('hidden')
     $(this).parent().children(':not(.icon-active)').addClass('hidden')
@@ -38,7 +36,6 @@ $(".tabs-buttons__item").click(function (event) {
   wrapper.children(`.tabs-content[data-tab-content="${tabId}"]`).toggleClass('tabs-content_active')
 })
 
-const enrtance = $('.entrance')
 
 $(".login").click(function (event) {
   const enrtance = $('.entrance')
@@ -57,4 +54,17 @@ $('.get-access__title').click(function() {
 
 $('.font-wrapper').click(function() {
   $(this).closest('.font__item').toggleClass('font__item_active')
+})
+
+
+$(".registration").click(function (event) {
+  const authorization = $('.header__authorization')
+  const name = $('.header__name')
+  authorization.addClass('header__authorization_hidden')
+  name.addClass('header__name_active')
+})
+
+$(".header__name").click(function (event) {
+  const settings = $('.header__settings')
+  settings.toggleClass('header__settings_active')
 })

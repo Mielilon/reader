@@ -122,6 +122,35 @@
   color: white
 
 
+.loading
+    position: absolute
+    width: 70px
+    height: 70px
+    background-image: url('./../img/icons/loading.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    top: 50vh
+    left: 0
+    right: 0
+    margin: auto
+    animation: loading 3s linear infinite
+@keyframes loading 
+    0 
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)
+.saved-icon
+    position: absolute
+    width: 44px
+    height: 70px
+    background-image: url('./../img/icons/saved.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    top: 0
+    right: 14px
+
 .icon_close, .icon_open
     width: 14px
     height: 14px
