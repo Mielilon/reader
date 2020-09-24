@@ -11,15 +11,10 @@ $(".controls__icon").click(function (event) {
   $(`.modal:not(${modalId})`).removeClass('modal_active')
   $(modalId).toggleClass('modal_active')
 
-  $('.controls__icon.icon-active').addClass('hidden')
-  $('.controls__icon:not(.icon-active)').removeClass('hidden')
-
-  if(isModalActive) {
-    $(this).parent().children('.icon-active').removeClass('hidden')
-    $(this).parent().children(':not(.icon-active)').addClass('hidden')
-  } else {
-    $(this).parent().children('.icon-active').removeClass('hidden')
-    $(this).parent().children(':not(.icon-active)').addClass('hidden')
+  $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
+  // $(this).parent().removeClass('hidden')
+  if(!isModalActive) {
+    $(this).parent().addClass('controls__img-wpapper_active')
   }
 })
 
