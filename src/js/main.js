@@ -65,7 +65,7 @@ $(".header__name").click(function (event) {
 })
 
 $('#save-icon').click(function() {
-  $(".first-page>.saved-icon, .reader__page>.saved-icon").addClass('saved-icon_active')
+  $(".reader__page>.saved-icon").addClass('saved-icon_active')
 })
 
 $(document).on('click',function (e) {
