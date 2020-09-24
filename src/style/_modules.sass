@@ -165,14 +165,17 @@
     position: relative
     width: 100%
     margin-top: 170px
-
     & .first-page
-        top: 0
-        margin-bottom: 0
+        margin-top: 0
     &  .reader__page
         width: 100%
         height: auto
         margin: 0
+
+.continuous-page_active
+    &  .reader__page
+        height: auto
+        margin: 0 auto
 .tabs
     &-content
         display: none
@@ -227,7 +230,19 @@
 
 
 //media
-
+@include respond-to(xl)
+    .double-page_active
+        .reader
+            &__info
+                column-count: 1
+                column-gap: 0
+@include respond-to(lg)
+    .double-page_active
+        display: block
+        .reader
+            &__info
+                column-count: 2
+                column-gap: 40px
 @include respond-to(md)
     .popup-background
         top: 100px
@@ -244,3 +259,7 @@
             height: 26px
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
             border-radius: 50%
+@include respond-to(xs)
+    .saved-icon
+        width: 25px
+        height: 40px

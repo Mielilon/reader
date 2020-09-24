@@ -4,27 +4,32 @@
     padding: 10px 0
     position: fixed
     width: 100%
-    top: 68px
+    top: 65px
     z-index: 100
     color: $light-grey
-    &__img-wpapper
+    &__img-wrapper
         cursor: pointer
     &__icon
         cursor: pointer
-    &__img-wpapper:hover, &__img-wpapper_active
+    &__img-wrapper:hover, &__img-wrapper_active
         svg
             rect
                 fill: $blue
-    &__img-wpapper:hover, &__img-wpapper_active
+    &__img-wrapper:hover, &__img-wrapper_active
         svg
             path
                 stroke: $blue
-    &__img-wpapper:hover, &__img-wpapper_active
+    &__img-wrapper:hover, &__img-wrapper_active
         .blue-f
             fill: $blue
         .blue-s
             stroke: $blue
-    
+    &__img-wrapper:hover, &__img-wrapper_active
+        svg
+            rect
+                stroke: #418BCA
+                fill: #ffffff
+
     &__settings
         display: flex
         align-items: center
@@ -105,31 +110,33 @@
 
 @include respond-to(lg)
     .controls
-        & .content
-            flex-wrap: wrap
-            justify-content: center
-        &__navigation
-            order: 2
-        &__control-panel
-            order: 4
-        &__settings
-            order: 3
+        top: 50px
+        &__img-description-7
+            display: none
+    .control-panel__format
+        display: none
+        
+
             
 
 
 
-@include respond-to(md)
+@include respond-to(xs)
     .controls
         overflow-y: hidden
         top: 50px
+        .content
+            justify-content: center
+            flex-wrap: nowrap
+            width: calc( 100% + 20px ) 
+        &__settings
+            margin-left: -10px
         &__img-description
             position: relative
             &:hover
                 &::before
                     display: none
-        & .content
-            flex-wrap: nowrap
-            width: calc( 100% + 20px ) 
+            
         &__control-panel
             display: none
         &__img-description-7

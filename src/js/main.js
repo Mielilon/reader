@@ -11,13 +11,15 @@ $(".controls__icon").click(function (event) {
   $(`.modal:not(${modalId})`).removeClass('modal_active')
   $(modalId).toggleClass('modal_active')
 
-  $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
+  $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
 
   if(!isModalActive) {
-    // тут добавляем
-    $(this).parent().addClass('controls__img-wpapper_active')
+    const left = $('.reader-controls__left')
+    left.addClass('left')
+    $(this).parent().addClass('controls__img-wrapper_active')
   } else {
-    // тут убираем
+    const left = $('.reader-controls__left')
+    left.removeClass('left')
   }
 })
 
@@ -76,6 +78,17 @@ $(document).on('click',function (e) {
   $(e.target).closest('.controls__icon').length) return;
 
   $('.modal.modal_active').removeClass('modal_active')
-  $('.controls__img-wpapper_active').removeClass('controls__img-wpapper_active')
-  // и тут убираем
+  $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
+  const left = $('.reader-controls__left')
+  left.removeClass('left')
  });
+ 
+$('.layout-double').click(function() {
+  const double = $('.layout-page')
+  double.toggleClass('double-page_active')
+})
+
+$('.layout-continuous').click(function() {
+  const double = $('.layout-page')
+  double.toggleClass('continuous-page_active')
+})

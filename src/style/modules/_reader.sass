@@ -19,27 +19,26 @@
 
 //media
 @include respond-to(lg)
+    .first-page
+        margin-top: 140px
     .reader
-        top: 40px 
         &__page
             width: 100%
+            height: 100%
+            height: auto
+            margin: 0 auto
 @include respond-to(xs)
+    .first-page
+        margin-top: 110px
     .reader
-        top: 0
+        margin-top: 0
         & .content
             padding-right: 0
         &__page
             width: 100%
             height: auto
-            margin: 0 
-            padding: 40px 30px 20px  
-    .first-page
-        position: relative
-        top: 100px
-        margin: 0
-        margin-bottom: 100px
-@include respond-to(xs)
-    .reader
+            margin: 0
+            padding: 50px 30px 50px  
         &__info
             column-count: 1
             column-gap: 0

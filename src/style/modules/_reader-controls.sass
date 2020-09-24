@@ -16,8 +16,8 @@
         width: auto
 
     &__pre, &__next
-        width: 40px
-        height: 40px
+        width: 61px
+        height: 61px
         cursor: pointer
     &__next
         transform: scale(-1, -1)
@@ -50,17 +50,16 @@
     path
         stroke: $white
 
-
+.left
+    left: 400px
+.right
+    right: 400px
 
 //media
 @include respond-to(lg) 
     .reader-controls
-        &__left
-            left: 50px
-@include respond-to(md)  
-    .reader-controls
         top: 120px
-        &__closer, &__next, &__left, &__farther, &__full-screen
+        &__left,  &__next
             display: none
         &__icon
             background-color: $blue
@@ -74,6 +73,13 @@
             top: 300px
         &__right
             right: 20px
-
-            
+        &__icon
+            background-color: $blue
+            svg
+                path, circle
+                    stroke: $white
+@include respond-to(xs) 
+    .reader-controls
+        &__farther, &__closer
+            display: none
 
