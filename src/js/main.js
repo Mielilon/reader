@@ -63,3 +63,7 @@ $(".header__name").click(function (event) {
   const settings = $('.header__settings')
   settings.toggleClass('hidden')
 })
+
+$('#save-icon').click(function() {
+  $(".first-page>.saved-icon, .reader__page>.saved-icon").addClass('saved-icon_active')
+})
