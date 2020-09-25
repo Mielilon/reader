@@ -91,6 +91,10 @@ $(document).on('click',function (e) {
 
   $('.modal.modal_active').removeClass('modal_active')
   $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 989ce43b9e706a8b0919663f5a3b7bb677aa288a
   $('.reader-controls__left, .reader-controls__right').removeClass('displaced')
  });
  
