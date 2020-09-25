@@ -10,10 +10,14 @@
     &__left
         z-index: 10
         left: 40px
+        &.displaced
+            left: 400px
     &__right
         right: 30px
         z-index: 10
         width: auto
+        &.displaced
+            right: 400px
 
     &__pre, &__next
         width: 61px
@@ -49,11 +53,6 @@
     fill: $blue
     path
         stroke: $white
-
-.left
-    left: 400px
-.right
-    right: 400px
 
 //media
 @include respond-to(lg) 

@@ -13,13 +13,14 @@ $(".controls__icon").click(function (event) {
 
   $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
 
+  const modalSide = $(modalId).attr('data-modal-side') || 'right'
+  const sideButton = $(`.reader-controls__${modalSide}`)
+
   if(!isModalActive) {
-    const left = $('.reader-controls__left')
-    left.addClass('left')
+    sideButton.addClass('displaced')
     $(this).parent().addClass('controls__img-wrapper_active')
   } else {
-    const left = $('.reader-controls__left')
-    left.removeClass('left')
+    sideButton.removeClass('displaced')
   }
 })
 
@@ -67,6 +68,13 @@ $(".registration").click(function (event) {
 $(".header__name").click(function (event) {
   const settings = $('.header__settings')
   settings.toggleClass('hidden')
+})
+
+$(document).click(function(e) {
+  if($(e.target).closest('.header__settings').length) return;
+  if($(e.target).closest('.header__name').length) return;
+
+  $('.header__settings').addClass('hidden')
 })
 
 $('#save-icon').click(function() {
