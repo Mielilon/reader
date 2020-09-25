@@ -7,6 +7,7 @@
     top: 65px
     z-index: 100
     color: $light-grey
+    user-select: none
     &__img-wrapper
         cursor: pointer
     &__icon
@@ -24,11 +25,11 @@
             fill: $blue
         .blue-s
             stroke: $blue
-    &__img-wrapper:hover, &__img-wrapper_active
+    &__img-description-5:hover, &__img-description-5.controls__img-wrapper_active
         svg
             rect
-                stroke: #418BCA
-                fill: #ffffff
+                stroke: $blue
+                fill: $white
 
     &__settings
         display: flex
@@ -87,6 +88,7 @@
             &::before
                 content: 'Изменить шрифт'    
     &__img-description-9
+        user-select: none
         &:hover
             color: $blue
             &::before

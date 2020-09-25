@@ -1,6 +1,6 @@
 //= jquery.min.js
 
-
+//открывает модальные окна, меняет цвет иконок и отодвигает кнопки
 $(".controls__icon").click(function (event) {
   const modalName = $(this).parent()[0].getAttribute('data-open-modal')
   if(!modalName) return
@@ -15,6 +15,7 @@ $(".controls__icon").click(function (event) {
 
   const modalSide = $(modalId).attr('data-modal-side') || 'right'
   const sideButton = $(`.reader-controls__${modalSide}`)
+  $('.reader-controls__left, .reader-controls__right').removeClass('displaced')
 
   if(!isModalActive) {
     sideButton.addClass('displaced')
@@ -24,6 +25,7 @@ $(".controls__icon").click(function (event) {
   }
 })
 
+//меняет контент модальных окон по табам
 $(".tabs-buttons__item").click(function (event) {
   const tabId = $(this).attr('data-tab-button')
   if(!tabId) return
@@ -37,7 +39,7 @@ $(".tabs-buttons__item").click(function (event) {
   wrapper.children(`.tabs-content[data-tab-content="${tabId}"]`).toggleClass('tabs-content_active')
 })
 
-
+//открывает модальное окно входа
 $(".login").click(function (event) {
   const enrtance = $('.entrance')
   enrtance.addClass('entrance__active')
@@ -48,7 +50,7 @@ $(".exit").click(function (event) {
   enrtance.removeClass('entrance__active')
 })
 
-
+//добавляет контент в блок отсутствия доступа
 $('.get-access__title').click(function() {
   $(this).closest('.get-access').toggleClass('get-access_active')
 })
@@ -57,7 +59,7 @@ $('.font-wrapper').click(function() {
   $(this).closest('.font__item').toggleClass('font__item_active')
 })
 
-
+//меняет авторизацию на кабинет
 $(".registration").click(function (event) {
   const authorization = $('.header__authorization')
   const name = $('.header__name')
@@ -77,6 +79,8 @@ $(document).click(function(e) {
   $('.header__settings').addClass('hidden')
 })
 
+
+//добавляет закладку
 $('#save-icon').click(function() {
   $(".reader__page>.saved-icon").addClass('saved-icon_active')
 })
@@ -87,16 +91,26 @@ $(document).on('click',function (e) {
 
   $('.modal.modal_active').removeClass('modal_active')
   $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
-  const left = $('.reader-controls__left')
-  left.removeClass('left')
+  $('.reader-controls__left, .reader-controls__right').removeClass('displaced')
  });
  
+
+//меняет раскладку
 $('.layout-double').click(function() {
-  const double = $('.layout-page')
-  double.toggleClass('double-page_active')
+  const layout = $('.layout-page')
+  layout.removeClass('continuous-page_active')
+  layout.toggleClass('double-page_active')
+
 })
 
 $('.layout-continuous').click(function() {
-  const double = $('.layout-page')
-  double.toggleClass('continuous-page_active')
+  const layout = $('.layout-page')
+  layout.toggleClass('continuous-page_active')
+  layout.removeClass('double-page_active')
+})
+
+$('.layout-single').click(function() {
+  const layout = $('.layout-page')
+  layout.removeClass('continuous-page_active')
+  layout.removeClass('double-page_active')
 })

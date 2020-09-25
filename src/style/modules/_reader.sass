@@ -17,6 +17,26 @@
     margin-top: 160px
 
 
+.double-page_active
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    justify-content: center
+    grid-gap: 20px
+    position: relative
+    width: 100%
+    margin-top: 170px
+    & .first-page
+        margin-top: 0
+    &  .reader__page
+        width: 100%
+        height: auto
+        margin: 0
+
+.continuous-page_active
+    &  .reader__page
+        height: auto
+        margin: 0 auto       
 //media
 @include respond-to(lg)
     .first-page

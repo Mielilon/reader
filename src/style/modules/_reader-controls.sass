@@ -55,6 +55,16 @@
         stroke: $white
 
 //media
+
+@include respond-to(xxl) 
+    .reader-controls
+        &__left
+            &.displaced
+                left: 0px
+        &__right
+            &.displaced
+                right: 0px
+                
 @include respond-to(lg) 
     .reader-controls
         top: 120px
