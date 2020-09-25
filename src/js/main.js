@@ -15,6 +15,7 @@ $(".controls__icon").click(function (event) {
 
   const modalSide = $(modalId).attr('data-modal-side') || 'right'
   const sideButton = $(`.reader-controls__${modalSide}`)
+  $('.reader-controls__left, .reader-controls__right').removeClass('displaced')
 
   if(!isModalActive) {
     sideButton.addClass('displaced')
@@ -87,8 +88,8 @@ $(document).on('click',function (e) {
 
   $('.modal.modal_active').removeClass('modal_active')
   $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
-  const left = $('.reader-controls__left')
-  left.removeClass('left')
+
+  $('.reader-controls__left, .reader-controls__right').removeClass('displaced')
  });
  
 $('.layout-double').click(function() {
