@@ -40,7 +40,7 @@
             &::before
                 content: ''
                 position: absolute
-                top: -65px
+                top: -55px
                 left: -18px
                 width: auto
                 min-width: 105px
@@ -50,10 +50,7 @@
                 border-radius: 3px
                 padding: 13px 18px
                 color: $dark-grey
-                
-        &:active
-            &::before
-                display: none
+                white-space: nowrap
                     
     &__img-description-1
         &:hover
@@ -70,7 +67,7 @@
     &__img-description-4
         &:hover
             &::before
-                content: '.'
+                content: 'К описанию'
     &__img-description-5
         &:hover
             &::before
@@ -130,7 +127,6 @@
         .content
             justify-content: center
             flex-wrap: nowrap
-            width: calc( 100% + 20px ) 
         &__settings
             margin-left: -10px
         &__img-description
