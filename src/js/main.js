@@ -115,3 +115,4 @@ $('.layout-single').click(function() {
   layout.removeClass('continuous-page_active')
   layout.removeClass('double-page_active')
 })
+
