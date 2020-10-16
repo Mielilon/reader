@@ -87,7 +87,29 @@
         height: 18px
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
         border-radius: 50%
-
+.input-icon-wrapper
+    position: relative
+    .input-icon
+        position: absolute
+        right: 0
+        width: 40px
+        height: 40px
+        background-image: url('./../img/icons/input-icon.svg') 
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        cursor: pointer
+        z-index: 30
+        opacity: 0
+@include respond-to(sm)
+    .input-icon-wrapper
+        .input-icon
+            opacity: 1
+    .shelf
+        .input-icon-wrapper
+            .input-icon
+                top: 10px
+    
 
 
 

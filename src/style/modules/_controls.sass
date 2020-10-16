@@ -36,6 +36,7 @@
         align-items: center
     &__img-description
         position: relative
+        white-space: nowrap
         &:hover
             &::before
                 content: ''
@@ -90,6 +91,13 @@
             color: $blue
             &::before
                 content: 'Текст'
+    &__img-description-10
+        user-select: none
+        display: none
+        &:hover
+            p
+                color: $blue
+
 
 .control-panel
     &__format
@@ -139,5 +147,13 @@
             display: none
         &__img-description-7
             display: none
+        &__img-description-10
+            display: block
 
+@media screen and ( max-width: 440px )
+    .controls
+        overflow: scroll
+        .content
+            width: calc( 100vw + 40px )
+    
         
