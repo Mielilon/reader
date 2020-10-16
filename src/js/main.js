@@ -50,6 +50,16 @@ $(".exit").click(function (event) {
   enrtance.removeClass('entrance__active')
 })
 
+$(".saved-info__img_edit").click(function (event) {
+  const enrtance = $('.bookmark')
+  enrtance.addClass('bookmark__active')
+})
+
+$(".exit").click(function (event) {
+  const enrtance = $('.bookmark')
+  enrtance.removeClass('bookmark__active')
+})
+
 //добавляет контент в блок отсутствия доступа
 $('.get-access__title').click(function() {
   $(this).closest('.get-access').toggleClass('get-access_active')
