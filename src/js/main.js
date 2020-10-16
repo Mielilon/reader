@@ -13,7 +13,7 @@ $(".controls__icon").click(function (event) {
 
   $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
 
-  const modalSide = $(modalId).attr('data-modal-side') || 'right'
+  const modalSide = $(modalId).attr('data-modal-side')
   const sideButton = $(`.reader-controls__${modalSide}`)
   $('.reader-controls__left, .reader-controls__right').removeClass('displaced')
 
