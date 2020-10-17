@@ -8,6 +8,25 @@ body, html
   color: $dark-grey
   scroll-behavior: smooth
   background-color: #F3F3F3
+html:fullscreen
+  body
+    background-color: #C8C8C8
+  .header
+    display: none
+  .controls
+    top: 0
+    &__img-description
+      &:hover
+        &::before
+          top: 30px
+  .first-page
+    margin-top: 100px
+  .popup-background
+    top: 30px
+@include respond-to(xs)
+  html:fullscreen
+    .first-page
+        margin-top: 55px
 
 *
   box-sizing: border-box

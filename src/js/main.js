@@ -126,3 +126,45 @@ $('.layout-single').click(function() {
   layout.removeClass('double-page_active')
 })
 
+
+//full screen
+var elem = document.querySelector("html")
+//Просмотр в полноэкранном режиме
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+  }
+}
+
+//Закрыть полный экран
+function closeFullscreen() {
+  if(document.cancelFullScreen) {
+    document.cancelFullScreen();
+  } else if(document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if(document.webkitCancelFullScreen) {
+    document.webkitCancelFullScreen();
+  }
+}
+
+$('.format__item_fullscreen').click(function() {
+    openFullscreen();
+})
+
+$('.format__item_fullscreen').click(function() {
+ closeFullscreen();
+})
+
+$('.reader-controls__full-screen').click(function() {
+  openFullscreen();
+}) 
+
+$('.reader-controls__full-screen').click(function() {
+ closeFullscreen();
+})
+
