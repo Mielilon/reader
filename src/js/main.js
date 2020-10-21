@@ -50,6 +50,7 @@ $(".login").click(function (event) {
 $(".exit").click(function (event) {
   const enrtance = $('.entrance')
   enrtance.removeClass('entrance__active')
+  $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
 })
 
 //открывает модальное окно закладок
@@ -98,7 +99,6 @@ $(document).click(function(e) {
 
 //добавляет закладку открывает модальное окно добавления закладки
 $('#save-icon').click(function() {
-  $(".reader__page>.saved-icon").addClass('saved-icon_active')
   $('.bookmark').addClass('bookmark__active')
 })
 
@@ -113,6 +113,8 @@ $('.bookmark__button').click(function() {
 
   $('.tabs-content[data-tab-content="1"]').removeClass('tabs-content_active')
   $('.tabs-content[data-tab-content="2"]').addClass('tabs-content_active')
+
+  $(".reader__page>.saved-icon").addClass('saved-icon_active')
 })
 
 //выключает модальное окно при нажатии на экран
@@ -190,3 +192,7 @@ $('.reader-controls__full-screen').click(function() {
  closeFullscreen();
 })
 
+//Открытие информации в оглавлении
+$('.content-info__text').click(function() {
+  
+})
