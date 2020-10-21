@@ -1,12 +1,32 @@
-.saved.modal(data-modal-side="left")#modal-content
+.content-popup.modal(data-modal-side="left")#modal-content
     .container
         .content
             .popup-background
-                .saved__popup.tabs-wrapper
+                .content__popup.tabs-wrapper
                     .double-button-wrapper.tabs-buttons
-                        button.double-button.tabs-buttons__item(data-tab-button="1") Оглавление
-                        button.double-button.tabs-buttons__item(data-tab-button="2").tabs-buttons__item_active Закладки
-                    .saved-info.tabs-content(data-tab-content="2").tabs-content_active
+                        button.double-button.tabs-buttons__item(data-tab-button="1").tabs-buttons__item_active Оглавление
+                        button.double-button.tabs-buttons__item(data-tab-button="2") Закладки
+
+                    .content-info.tabs-content(data-tab-content="1").tabs-content_active
+                        .content-info__item
+                            p.normal-text.content-info__text.content-info__text_open Глава 1. Научный журнал “Инженерные технологии и системы”
+                                img(src="./img/minus.svg", alt="").minus
+                            .content-info__points
+                                p.blue-text.content-info__description 1.2. Научный журнал “Инженерные технологии и системы”
+                                p.grey-text.content-info__description 1.2. Научный журнал “Инженерные технологии и системы”
+                                p.grey-text.content-info__description 1.2. Научный журнал “Инженерные технологии и системы”
+                        .content-info__item
+                            p.normal-text.content-info__text  Глава 1. Научный журнал “Инженерные технологии и системы”
+                                img(src="./img/plus.svg", alt="").plus  
+                        .content-info__item
+                            p.normal-text.content-info__text Глава 1. Научный журнал “Инженерные технологии и системы”
+                                img(src="./img/plus.svg", alt="").plus  
+                        .content-info__item
+                            p.normal-text.content-info__text Глава 1. Научный журнал “Инженерные технологии и системы”
+                                img(src="./img/plus.svg", alt="").plus  
+
+
+                    .saved-info.tabs-content(data-tab-content="2")
                         .saved-info__item
                             .saved-wrapper
                                 p.blue-text.saved-info__text 1.2. Научный журнал “Инженер инженер инженер
@@ -37,21 +57,4 @@
                                 p.grey-text Стр. 5
                             img(src="./img/icons/pen.svg", alt="").saved-info__img.saved-info__img_edit
                             img(src="./img/icons/close.svg", alt="").saved-info__img.m-l-12.saved-info__img_delete
-                    .contents-info.tabs-content(data-tab-content="1")
-                        .contents-info__item
-                            p.normal-text.contents-info__text.contents-info__text_open Глава 1. Научный журнал “Инженерные технологии и системы”
-                                img(src="./img/minus.svg", alt="").minus
-                            .contents-info__points
-                                p.blue-text.contents-info__description 1.2. Научный журнал “Инженерные технологии и системы”
-                                p.grey-text.contents-info__description 1.2. Научный журнал “Инженерные технологии и системы”
-                                p.grey-text.contents-info__description 1.2. Научный журнал “Инженерные технологии и системы”
-                        .contents-info__item
-                            p.normal-text.contents-info__text  Глава 1. Научный журнал “Инженерные технологии и системы”
-                                img(src="./img/plus.svg", alt="").plus  
-                        .contents-info__item
-                            p.normal-text.contents-info__text Глава 1. Научный журнал “Инженерные технологии и системы”
-                                img(src="./img/plus.svg", alt="").plus  
-                        .contents-info__item
-                            p.normal-text.contents-info__text Глава 1. Научный журнал “Инженерные технологии и системы”
-                                img(src="./img/plus.svg", alt="").plus  
                     

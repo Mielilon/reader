@@ -25,6 +25,8 @@ $(".controls__icon").click(function (event) {
   }
 })
 
+
+
 //меняет контент модальных окон по табам
 $(".tabs-buttons__item").click(function (event) {
   const tabId = $(this).attr('data-tab-button')
@@ -36,7 +38,7 @@ $(".tabs-buttons__item").click(function (event) {
   $(this).addClass('tabs-buttons__item_active')
 
   wrapper.children(`.tabs-content:not([data-tab-content="${tabId}"])`).removeClass('tabs-content_active')
-  wrapper.children(`.tabs-content[data-tab-content="${tabId}"]`).toggleClass('tabs-content_active')
+  wrapper.children(`.tabs-content[data-tab-content="${tabId}"]`).addClass('tabs-content_active')
 })
 
 //открывает модальное окно входа
@@ -50,6 +52,7 @@ $(".exit").click(function (event) {
   enrtance.removeClass('entrance__active')
 })
 
+//открывает модальное окно закладок
 $(".saved-info__img_edit").click(function (event) {
   const enrtance = $('.bookmark')
   enrtance.addClass('bookmark__active')
@@ -92,10 +95,19 @@ $(document).click(function(e) {
 })
 
 
-//добавляет закладку
+//добавляет закладку открывает модальное окно добавления закладки
 $('#save-icon').click(function() {
   $(".reader__page>.saved-icon").addClass('saved-icon_active')
+  $('.bookmark').addClass('bookmark__active')
+  
+  $('.bookmark__button').click(function() {
+    $('.bookmark').removeClass('bookmark__active')
+    $('#modal-content').addClass('modal_active')
+  })
+  
 })
+
+
 
 $(document).on('click',function (e) {
   if ($(e.target).closest('.modal.modal_active').length ||
