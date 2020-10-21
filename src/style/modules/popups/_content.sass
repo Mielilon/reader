@@ -31,6 +31,23 @@
     &__text
         padding-left: 20px
         position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 10px
+            height: 10px
+            left: 0
+            top: 0
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url('./../img/plus.svg')
+            transition: .3s
+        &_open
+            &::before
+                background-image: url('./../img/minus.svg')
+                transition: .3s
+        
     &__points
         margin-top: 18px
         margin-left: 40px
@@ -44,7 +61,7 @@
     position: absolute
     left: 0
     top: 2px
-.minus 
-    position: absolute
-    left: 0
-    top: 8px
+
+.content-info, .saved-info
+    max-height: 70vh
+    overflow: scroll

@@ -194,5 +194,7 @@ $('.reader-controls__full-screen').click(function() {
 
 //Открытие информации в оглавлении
 $('.content-info__text').click(function() {
-  
+  // $(".content-info__points").removeClass("content-info__points_active");
+  $(this).siblings(".content-info__points").toggleClass("content-info__points_active");
+  $(this).toggleClass("content-info__text_open");
 })
