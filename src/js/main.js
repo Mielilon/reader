@@ -78,15 +78,17 @@ $(".registration").click(function (event) {
 })
 
 $(".header__name").click(function (event) {
-  const settings = $('.header__settings')
-  settings.toggleClass('hidden')
+  $('.authorization-menu__popup').toggleClass('hidden')
+  $('.header__name').toggleClass('header__name_active')
+
 })
 
 $(document).click(function(e) {
-  if($(e.target).closest('.header__settings').length) return;
+  if($(e.target).closest('.authorization-menu__popup').length) return;
   if($(e.target).closest('.header__name').length) return;
 
-  $('.header__settings').addClass('hidden')
+  $('.authorization-menu__popup').addClass('hidden')
+  $('.header__name').removeClass('header__name_active')
 })
 
 
