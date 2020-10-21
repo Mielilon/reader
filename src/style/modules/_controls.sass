@@ -126,11 +126,19 @@
         top: 50px
         &__img-description-7
             display: none
+        &__control-panel
+            display: none
+        &__img-description-7
+            display: none
+        &__img-description-10
+            display: block
+        &__img-description
+            position: relative
+            &:hover
+                &::before
+                    display: none
     .control-panel__format
         display: none
-        
-
-            
 
 
 
@@ -143,18 +151,6 @@
             flex-wrap: nowrap
         &__settings
             margin-left: -10px
-        &__img-description
-            position: relative
-            &:hover
-                &::before
-                    display: none
-            
-        &__control-panel
-            display: none
-        &__img-description-7
-            display: none
-        &__img-description-10
-            display: block
 
 @media screen and ( max-width: 440px )
     .controls
