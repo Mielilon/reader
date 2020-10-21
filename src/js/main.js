@@ -72,6 +72,7 @@ $('.font-wrapper').click(function() {
   $(this).closest('.font__item').toggleClass('font__item_active')
 })
 
+
 //меняет авторизацию на кабинет
 $(".registration").click(function (event) {
   const authorization = $('.header__authorization')
@@ -99,18 +100,25 @@ $(document).click(function(e) {
 $('#save-icon').click(function() {
   $(".reader__page>.saved-icon").addClass('saved-icon_active')
   $('.bookmark').addClass('bookmark__active')
-  
-  $('.bookmark__button').click(function() {
-    $('.bookmark').removeClass('bookmark__active')
-    $('#modal-content').addClass('modal_active')
-  })
-  
 })
 
+//анимация сохранения закладки
+$('.bookmark__button').click(function() {
+  $('.bookmark').removeClass('bookmark__active')
+  $('#modal-content').addClass('modal_active')
+  $('.reader-controls__left').addClass('displaced')
 
+  $('.tabs-buttons__item[data-tab-button="1"]').removeClass('tabs-buttons__item_active')
+  $('.tabs-buttons__item[data-tab-button="2"]').addClass('tabs-buttons__item_active')
 
+  $('.tabs-content[data-tab-content="1"]').removeClass('tabs-content_active')
+  $('.tabs-content[data-tab-content="2"]').addClass('tabs-content_active')
+})
+
+//выключает модальное окно при нажатии на экран
 $(document).on('click',function (e) {
   if ($(e.target).closest('.modal.modal_active').length ||
+  $(e.target).closest('.bookmark').length ||
   $(e.target).closest('.controls__icon').length) return;
 
   $('.modal.modal_active').removeClass('modal_active')
