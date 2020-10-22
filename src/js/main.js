@@ -232,7 +232,7 @@ $('#less-icon').click(function() {
  })
 
  $('#more-icon').click(function() {
-  if(i > 13) {
+  if(i + 1 >= scaleArray.length) {
     return
   } else {
     i = i + 1
