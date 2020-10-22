@@ -198,3 +198,46 @@ $('.content-info__text').click(function() {
   $(this).siblings(".content-info__points").toggleClass("content-info__points_active");
   $(this).toggleClass("content-info__text_open");
 })
+
+//изменение масштаба
+
+let scaleArray = [
+  50,
+  75,
+  100,
+  125,
+  150,
+  175,
+  200,
+  225,
+  250,
+  275,
+  300,
+  325,
+  350,
+  375,
+  400,
+]
+
+let i = 2
+
+$('#less-icon').click(function() {
+    if(i === 0) {
+      return
+    } else {
+      i = i - 1
+      $(".reader").attr("data-scale-percent", scaleArray[i])
+      $('.scale__interest').text(scaleArray[i] + '%')
+    }
+ })
+
+ $('#more-icon').click(function() {
+  if(i > 13) {
+    return
+  } else {
+    i = i + 1
+    $(".reader").attr("data-scale-percent", scaleArray[i])
+    $('.scale__interest').text(scaleArray[i] + '%')
+  }
+ })
+
