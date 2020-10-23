@@ -9,7 +9,7 @@
         width: 730px
         height: 911px
         margin: 0 auto 31px
-        padding: 52px 80px 26px
+        padding: 55px 80px
         position: relative
     &__info
         display: flex
@@ -154,13 +154,13 @@
 
 //media
 @include respond-to(lg)
+    [data-scale-percent="100"] .reader__page
+        width: 100% 
+        height: auto
+        margin: 30px auto 
     .first-page
-        margin-top: 140px
-    .reader
-        &__page
-            width: 100%
-            height: auto
-            margin: 50px auto
+        margin-top: 150px !important
+            
 @include respond-to(xs)
     .first-page
         margin-top: 110px
