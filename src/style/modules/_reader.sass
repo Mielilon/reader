@@ -1,5 +1,9 @@
 .reader
     position: relative
+    width: 100vw
+    overflow-y: hidden
+    .container
+        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     &__page
         background-color: $white
         width: 730px
@@ -39,90 +43,54 @@
 
 //scale
 [data-scale-percent="400"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 4 ) 
             height: calc( 911px * 4 ) 
 
 [data-scale-percent="375"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 3.75 ) 
             height: calc( 911px * 3.75 ) 
 
 [data-scale-percent="350"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 3.5 ) 
             height: calc( 911px * 3.5 ) 
 
 [data-scale-percent="325"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 3.25 ) 
             height: calc( 911px * 3.25 ) 
 
 [data-scale-percent="300"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 3 ) 
             height: calc( 911px * 3 ) 
 
 [data-scale-percent="275"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 2.75 ) 
             height: calc( 911px * 2.75 ) 
     
 [data-scale-percent="250"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 2.5 ) 
             height: calc( 911px * 2.5 ) 
     
 [data-scale-percent="225"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 2.25 ) 
             height: calc( 911px * 2.25 ) 
 
 [data-scale-percent="200"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 2 ) 
@@ -130,60 +98,39 @@
 
 
 [data-scale-percent="175"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 1.75 ) 
             height: calc( 911px * 1.75 ) 
 
 [data-scale-percent="150"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 1.5 ) 
             height: calc( 911px * 1.5 ) 
 
 [data-scale-percent="125"]
-    width: 100vw !important
-    overflow-y: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 1.25 ) 
             height: calc( 911px * 1.25 ) 
 
 [data-scale-percent="100"]
-    width: 100vw !important
     overflow: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 1 ) 
             height: calc( 911px * 1 ) 
 
 [data-scale-percent="75"]
-    width: 100vw !important
     overflow: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 0.75 ) 
             height: calc( 911px * 0.75 ) 
 
 [data-scale-percent="50"]
-    width: 100vw !important
     overflow: hidden !important
-    .container
-        grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
     .reader
         &__page
             width: calc( 730px * 0.5 ) 

@@ -241,3 +241,29 @@ $('#less-icon').click(function() {
   }
  })
 
+
+//открывает модальное окно текста
+$("#controls-txt").click(function (event) {
+  $('.text').toggleClass("text__active");
+  $(this).toggleClass("controls__txt_active");
+  $('.text__copy-description').removeClass("text__copy-description_active");
+})
+
+$(".exit").click(function (event) {
+  $('.text').removeClass("text__active");
+  $('#controls-txt').removeClass("controls__txt_active");
+  $('.text__copy-description').removeClass("text__copy-description_active");
+})
+
+//копирование текста нажатием на кнопку
+
+function copyText() {
+  var copyText = $('.text__content-wrapper');
+  copyText.select();
+  document.execCommand("copy");
+  $('.text__copy-description').addClass("text__copy-description_active");
+}
+
+$(".text__button").click(function (event) {
+  copyText()
+})
