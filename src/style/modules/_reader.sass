@@ -4,7 +4,6 @@
     overflow: hidden !important
     .container
         grid-template-columns: 0 [p-start] 0 [c-start] auto [c-end]  0 [p-end] 0 !important
-        overflow: hidden
     &__page
         background-color: $white
         width: 730px
@@ -126,24 +125,32 @@
         &__page
             width: calc( 730px * 1.25 ) 
             height: calc( 911px * 1.25 ) 
+        .container
+            overflow: hidden 
 
 [data-scale-percent="100"]
     .reader
         &__page
             width: calc( 730px * 1 ) 
             height: calc( 911px * 1 ) 
+        .container
+            overflow: hidden 
 
 [data-scale-percent="75"]
     .reader
         &__page
             width: calc( 730px * 0.75 ) 
             height: calc( 911px * 0.75 ) 
+        .container
+            overflow: hidden 
 
 [data-scale-percent="50"]
     .reader
         &__page
             width: calc( 730px * 0.5 ) 
             height: calc( 911px * 0.5 ) 
+        .container
+            overflow: hidden 
 
 //media
 @include respond-to(lg)
