@@ -14,6 +14,10 @@
         cursor: pointer
         display: flex
         align-items: center
+        transition: .2s
+        &:hover
+            transform: scale(1.1)
+            transition: .2s
     &__icon
         cursor: pointer
     &__img-wrapper:hover, &__img-wrapper_active
@@ -44,8 +48,8 @@
         height: 30px
         display: flex
         align-items: center
-
         &:hover
+            transform: scale(1)
             &::before
                 content: ''
                 position: absolute
@@ -60,7 +64,7 @@
                 padding: 13px 18px
                 color: $dark-grey
                 white-space: nowrap
-                    
+      
     &__img-description-1
         &:hover
             &::before
@@ -101,7 +105,7 @@
             color: $blue
             &::before
                 content: 'Текст'
-                left: -70px
+                left: -90px
     &__img-description-10
         user-select: none
         display: none
@@ -127,7 +131,14 @@
     color: #4B4B4B
     width: 40px
     text-align: center
-
+#controls-rotate-left
+    &:hover
+        transform: rotate(-40deg)
+        margin-top: 5px
+#controls-rotate-right
+    &:hover
+        transform: rotate(40deg)
+        margin-bottom: 5px
 @include respond-to(lg)
     .controls
         top: 50px
