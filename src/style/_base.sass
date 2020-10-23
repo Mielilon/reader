@@ -23,10 +23,19 @@ html:fullscreen
     margin-top: 100px
   .popup-background
     top: 30px
-@include respond-to(xs)
+@include respond-to(lg)
   html:fullscreen
     .first-page
-        margin-top: 55px
+        margin-top: 100px !important
+@include respond-to(xs)
+  html:fullscreen
+    .controls
+      display: none !important
+    .first-page
+        margin-top: 0 !important
+    .reader__page
+      margin-top: 0
+      margin-bottom: 30px
 
 *
   box-sizing: border-box
