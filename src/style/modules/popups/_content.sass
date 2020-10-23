@@ -6,12 +6,13 @@
 .saved
     &-info
         margin-top: 30px
+        padding-right: 20px
         &__text
             line-height: 20px
-            overflow: hidden
         &__img
             margin-top: 10px
             display: none
+
         &__item
             border-bottom: 1px solid #E5E5E5
             margin-bottom: 12px
@@ -21,7 +22,9 @@
             &:hover .saved-info__img
                 display: block
             &:hover .saved-info__text
-                width: 220px
+                width: 200px
+            &:hover  .saved-wrapper
+                width: 80%
 
 .content-info
     margin-top: 26px
@@ -63,5 +66,5 @@
     top: 2px
 
 .content-info, .saved-info
-    max-height: 70vh
-    overflow: scroll
+    max-height: calc( 60vh + 20px )
+    overflow-y: scroll
