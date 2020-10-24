@@ -162,7 +162,7 @@
 
 @include respond-to(xs)
     .controls
-        overflow-y: hidden
+        overflow-y: auto
         top: 50px
         .content
             justify-content: center
@@ -172,8 +172,7 @@
 
 @media screen and ( max-width: 440px )
     .controls
-        overflow: scroll
         .content
-            width: calc( 100vw + 40px )
+            width: calc( 100vw + 100px )
     
         
