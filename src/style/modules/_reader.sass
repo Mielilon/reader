@@ -114,8 +114,6 @@
         &__page
             width: calc( 730px * 1.25 ) 
             height: calc( 911px * 1.25 ) 
-        .container
-            overflow: hidden 
 
 [data-scale-percent="100"]
     .reader
@@ -123,7 +121,7 @@
             width: calc( 730px * 1 ) 
             height: calc( 911px * 1 ) 
         .container
-            overflow: hidden 
+            overflow: hidden !important
 
 [data-scale-percent="75"]
     .reader
@@ -131,7 +129,7 @@
             width: calc( 730px * 0.75 ) 
             height: calc( 911px * 0.75 ) 
         .container
-            overflow: hidden 
+            overflow: hidden !important
 
 [data-scale-percent="50"]
     .reader
@@ -139,7 +137,7 @@
             width: calc( 730px * 0.5 ) 
             height: calc( 911px * 0.5 ) 
         .container
-            overflow: hidden 
+            overflow: hidden !important
 
 //media
 @include respond-to(lg)
