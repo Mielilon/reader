@@ -140,12 +140,69 @@
 
 //media
 @include respond-to(lg)
+    .first-page
+        margin-top: 150px !important
+
+    [data-scale-percent="400"] .reader__page
+        width: calc( 100% * 4 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="375"] .reader__page
+        width: calc( 100% * 3.75 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="350"] .reader__page
+        width: calc( 100% * 3.5 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="325"] .reader__page
+        width: calc( 100% * 3.25 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="300"] .reader__page
+        width: calc( 100% * 3 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="275"] .reader__page
+        width: calc( 100% * 2.75 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="250"] .reader__page
+        width: calc( 100% * 2.5 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="225"] .reader__page
+        width: calc( 100% * 2.25 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="200"] .reader__page
+        width: calc( 100% * 2 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="175"] .reader__page
+        width: calc( 100% * 1.75 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="150"] .reader__page
+        width: calc( 100% * 1.5 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="125"] .reader__page
+        width: calc( 100% * 1.25 ) 
+        height: auto
+        margin: 30px auto 
     [data-scale-percent="100"] .reader__page
         width: 100% 
         height: auto
         margin: 30px auto 
-    .first-page
-        margin-top: 150px !important
+    [data-scale-percent="75"] .reader__page
+        width: calc( 100% * 0.75 ) 
+        height: auto
+        margin: 30px auto 
+    [data-scale-percent="50"] .reader__page
+        width: calc( 100% * 0.5 ) 
+        height: auto
+        margin: 30px auto 
             
 @include respond-to(xs)
     .first-page

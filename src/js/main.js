@@ -241,6 +241,23 @@ $('#less-icon').click(function() {
   }
  })
 
+ $('.reader-controls__farther').click(function() {
+  if(i === 0) {
+    return
+  } else {
+    i = i - 1
+    $(".reader").attr("data-scale-percent", scaleArray[i])
+  }
+})
+
+$('.reader-controls__closer').click(function() {
+if(i + 1 >= scaleArray.length) {
+  return
+} else {
+  i = i + 1
+  $(".reader").attr("data-scale-percent", scaleArray[i])
+}
+})
 
 //открывает модальное окно текста
 $("#controls-txt").click(function (event) {
