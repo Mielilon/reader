@@ -63,13 +63,14 @@
 
 @include respond-to(lg) 
     .reader-controls
-        top: 120px
+        height: 100%
+        top: 0
         &__left,  &__next
             display: none
         &__icon
             background-color: $blue
         &__panel
-            height: calc( 100vh - 190px ) 
+            height: 100%
             margin-top: 0
             top: 0
             justify-content: flex-end
