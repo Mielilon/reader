@@ -2,13 +2,13 @@
     .container
         .content
             .popup-background
-                .search-popup
-                    input.input-text.search__input(type="text" placeholder='Введите запрос')
+                form(action="").search-popup
+                    input.input-text.search__input(type="text" placeholder='Введите запрос' required)
                     .search-wrapper.m-t-16
                         input.checkbox(type="checkbox" id="exact-search") 
                         label.checkbox-label(for="exact-search") Точный поиск
                     .flex.m-t-16
-                        button(type="button").button.search__button Искать
+                        button(type="submit").button.search__button Искать
                         p.search__clean.blue-text Очистить
                     .search-wrapper.m-t-24
                         .search__item.flex

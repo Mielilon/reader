@@ -6,21 +6,21 @@
                     .double-button-wrapper
                         button.double-button.link__double-button.tabs-buttons__item(data-tab-button="3") Ссылка на документ
                         utton.double-button.link__double-button.tabs-buttons__item(data-tab-button="4").tabs-buttons__item_active LMS-ссылки
-                    .tabs-content(data-tab-content="4").tabs-content_active
+                    form(action="").tabs-content(data-tab-content="4").tabs-content_active
                         p.normal-text.m-t-24 Вы можете создавать ссылки на страницы книг для вставки в Систему управления обучением (англ. learning management system, LMS) своего учебного заведения. Для чтения страниц по таким ссылкам не требуется быть авторизованным пользователем ЭБС.
                         .flex.m-t-24
                             label(for="from").m-r-16.normal-text Страница с
-                            input(type="number" id='from' min='0' max='271').num-input.m-r-16
+                            input(type="number" id='from' min='0' max='271' required).num-input.m-r-16
                             label(for="to").m-r-16.normal-text до
-                            input(type="number" id='to' min='1' max='272').num-input
+                            input(type="number" id='to' min='1' max='272' required).num-input
                         .link__input-wrapper.m-t-16
-                            input(type="text").link-input.input-text
-                            input(type="submit" value='Создать и скопировать в буфер').link__button.button
+                            input(type="text" required).link-input.input-text
+                            button(type="submit").link__button.button Создать и скопировать в буфер
                             a.blue-text.m-t-24 Все lms-ссылки
-                    .tabs-content(data-tab-content="3")
+                    form(action="").tabs-content(data-tab-content="3")
                         p.normal-text.m-t-24 Вы можете создавать и копировать ссылки на  документы
                         .m-t-16.f-d-c
-                            input(type="text").link-input.input-text
+                            input(type="text" required).link-input.input-text
                         .m-t-16.f-d-c    
                             button(type="submit").link__button.button Создать и скопировать в буфер
                             a.blue-text.m-t-24 Все ссылки

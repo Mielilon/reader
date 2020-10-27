@@ -2,7 +2,7 @@
     .container
         .content
             .popup-background
-                .shelf-popup 
+                form(action="").shelf-popup 
                     input.checkbox(type="checkbox" id="shelf-1") 
                     label.checkbox-label(for="shelf-1") Полка 1
                     .flex
@@ -10,9 +10,9 @@
                         .icon_close.shelf-close
                     .input-icon-wrapper
                         .input-icon
-                        input.input-text.shelf__input(type="text" placeholder='Полка 2')
+                        input.input-text.shelf__input(type="text" placeholder='Полка 2' required)
                     .shelf-wrapper.flex.jc-sb
-                        button(type="button").button.shelf__button Сохранить
+                        button(type="submit").button.shelf__button Сохранить
                         a.blue-text Управлять полками
 
                     
