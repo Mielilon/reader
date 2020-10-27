@@ -259,9 +259,7 @@ if(i + 1 >= scaleArray.length) {
 }
 })
 
-//открывает модальное окно текста
-
-
+//закрывает модальные окна нажатием на крестик
 $(".exit").click(function (event) {
   $('.modal').removeClass("modal_active");
   $('.controls__img-wrapper').removeClass("controls__img-wrapper_active");
