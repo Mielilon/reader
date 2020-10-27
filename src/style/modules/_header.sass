@@ -67,7 +67,7 @@
 .book
     cursor: pointer
     margin-left: 34px
-    white-space: nowrap
+    max-width: 35vw
     &__back
         font-family: FontAwesome
     &__name
@@ -76,7 +76,7 @@
         line-height: 18px
         overflow: hidden
         text-overflow: ellipsis
-        max-width: 40vw
+        white-space: nowrap
 
 
 
@@ -84,7 +84,7 @@
 @media screen and ( min-width: 2700px )
     .book
         &__name
-            max-width: 30vw
+            max-width: 35vw
     
 @include respond-to(lg)
     .header 
