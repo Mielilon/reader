@@ -282,6 +282,6 @@ $(".text__button").click(function (event) {
 
 $(".shelf__description").click(function (event) {
   $('.shelf__input').toggleClass("shelf__input_active");
-  $('.icon_close').toggleClass("shelf_close");
-  $('.input-icon').toggleClass("input-icon_active");
+  $('.shelf-icon').toggleClass("shelf_close");
+  $('.shelf__input-icon').toggleClass("input-icon_active");
 })
