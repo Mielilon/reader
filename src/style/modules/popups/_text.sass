@@ -5,9 +5,9 @@
     height: 100%
     z-index: 96
     background: $white
-    & .container
-        width: 100%
+    & .content
         height: 100%
+        width: 100%
         display: flex
         flex-direction: column
         align-items: center
@@ -47,11 +47,17 @@
     width: auto
     height: 75vh
     margin-bottom: 30px
-    top: 80px
+    top: 120px
+    .exit
+        top: -20px
+        right: -5px
+
 
 
 @include respond-to(lg)
     .text
+        .text-popup
+            width: 100%
         &__content-wrapper
             width: 100%
 @include respond-to(sm)
