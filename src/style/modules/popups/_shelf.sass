@@ -8,14 +8,22 @@
         position: relative
         width: 100%
         height: 40px
+        display: none
+        &_active
+            display: block
+    .input-icon
+        display: none
+        margin-top: -10px
+        &_active
+            display: block
     &-wrapper
         margin-top: 40px
     &__button
         padding: 8px 24px
-    &-close
-        margin-top: 6px
-    &-open
-        margin-top: 8px
+    &_close
+        transform: rotate(45deg)
+        margin-top: 20px
+        transition: .3s
 @include respond-to(sm)
     .shelf
         &__button

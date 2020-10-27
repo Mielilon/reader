@@ -277,3 +277,11 @@ function copyText() {
 $(".text__button").click(function (event) {
   copyText()
 })
+
+//полка
+
+$(".shelf__description").click(function (event) {
+  $('.shelf__input').toggleClass("shelf__input_active");
+  $('.icon_close').toggleClass("shelf_close");
+  $('.input-icon').toggleClass("input-icon_active");
+})
