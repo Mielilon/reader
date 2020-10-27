@@ -232,8 +232,30 @@
     margin-top: 0px
     transition: .3s
 
-
-
+.exit
+    cursor: pointer
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 15px
+    right: 15px
+    &::before, &::after
+        position: absolute
+        background-color: $blue
+        content: ''
+        width: 30px
+        height: 1px
+    &::before
+        right: 16px
+        top: 26px
+        transform: rotate(45deg)
+    &::after
+        right: 16px
+        top: 26px
+        transform: rotate(-45deg)
+.exit_black
+    &::before, &::after
+        background-color: $dark-grey
 
 
 
@@ -253,7 +275,7 @@
                 column-gap: 40px
 @include respond-to(md)
     .popup-background
-        top: 100px
+        top: 85px
         width: 100% !important
         height: 100vh
 @include respond-to(sm)

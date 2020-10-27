@@ -81,6 +81,11 @@
 
 
 //media
+@media screen and ( min-width: 2700px )
+    .book
+        &__name
+            max-width: 30vw
+    
 @include respond-to(lg)
     .header 
         padding: 10px 0
@@ -115,7 +120,7 @@
             flex-direction: column
         &__popup
             width: 180px !important
-@include respond-to(sm)
+@include respond-to(xs)
     .header 
         padding: 10px
 @media screen and ( max-width: 420px)

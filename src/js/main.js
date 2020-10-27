@@ -260,16 +260,11 @@ if(i + 1 >= scaleArray.length) {
 })
 
 //открывает модальное окно текста
-$("#controls-txt").click(function (event) {
-  $('.text').toggleClass("text__active");
-  $(this).toggleClass("controls__txt_active");
-  $('.text__copy-description').removeClass("text__copy-description_active");
-})
+
 
 $(".exit").click(function (event) {
-  $('.text').removeClass("text__active");
-  $('#controls-txt').removeClass("controls__txt_active");
-  $('.text__copy-description').removeClass("text__copy-description_active");
+  $('.modal').removeClass("modal_active");
+  $('.controls__img-wrapper').removeClass("controls__img-wrapper_active");
 })
 
 //копирование текста нажатием на кнопку
