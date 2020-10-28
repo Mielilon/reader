@@ -100,6 +100,8 @@
         background-size: cover
         cursor: pointer
         z-index: 30
+        outline: none
+        border: none
         opacity: 0
 @include respond-to(lg)
     .number-page
@@ -141,7 +143,21 @@
     border-color: $blue
     color: $blue
     z-index: 3
-
+.button
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: $white
+  background-color: $blue
+  padding: 9px 15px
+  border-radius: 3px
+  display: inline-block
+  cursor: pointer
+  border: none
+  outline: none
+  &_disabled
+      background-color: #cacdd3
+      cursor: not-allowed
 
 
 //backgrounds

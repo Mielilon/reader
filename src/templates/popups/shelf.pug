@@ -9,11 +9,12 @@
                     .flex
                         p.blue-text.shelf__description.m-t-24 Создать новую полку
                         .icon_close.shelf-icon
-                    .input-icon-wrapper
-                        .input-icon.shelf__input-icon
+                    .input-icon-wrapper.flex
+                        button(type='submit').input-icon.shelf__input-icon
                         input.input-text.shelf__input(type="text" placeholder='Полка 2' required)
+                        button.button.shelf__little-button(type='submit') Создать
                     .shelf-wrapper.flex.jc-sb
-                        button(type="submit").button.shelf__button Сохранить
+                        button(type="submit").button.shelf__button.button_disabled Сохранить
                         a.blue-text Управлять полками
 
                     

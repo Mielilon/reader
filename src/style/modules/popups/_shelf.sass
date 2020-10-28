@@ -4,6 +4,13 @@
     &__description
         font-size: 16px
         cursor: pointer
+    &__little-button
+        height: 40px
+        margin-bottom: 4px
+        margin-left: 4px
+        display: none
+        &_active
+            display: block
     &__input
         position: relative
         width: 100%
@@ -11,9 +18,10 @@
         display: none
         &_active
             display: block
+    .input-icon-wrapper
+        
     .input-icon
         display: none
-        margin-top: -10px
         &_active
             display: block
     &-wrapper
@@ -26,5 +34,8 @@
         transition: .3s
 @include respond-to(sm)
     .shelf
+        &__little-button_active
+            display: none
         &__button
             margin-right: 10px
+        
