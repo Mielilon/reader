@@ -9,6 +9,9 @@
         display: flex
         align-items: center
         justify-content: space-between
+    &__info-wrapper
+        width: 100%
+        overflow: hidden
     &__logo
         width: 190px
     &__little-logo
@@ -18,7 +21,7 @@
         font-size: 14px
         line-height: 16px
         white-space: nowrap
-        margin-left: 20px
+        margin-left: 40px
     &__name
         cursor: pointer
         position: relative
@@ -67,7 +70,10 @@
 .book
     cursor: pointer
     margin-left: 34px
-    max-width: 35vw
+    width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
     &__back
         font-family: FontAwesome
     &__name
@@ -89,6 +95,8 @@
 @include respond-to(lg)
     .header 
         padding: 10px 0
+        &__info-wrapper
+            width: calc( 100vw - 240px )
         &__settings
             right: 0
         &__logo
@@ -113,6 +121,11 @@
         &__back
             font-size: 11px
 @include respond-to(md)
+    .header 
+        &__info-wrapper
+            width: calc( 100vw - 160px )
+        &__authorization, &__name
+            margin-left: 20px
     .authorization-menu 
         .content
             align-items: flex-end
@@ -123,11 +136,11 @@
 @include respond-to(xs)
     .header 
         padding: 10px
+        &__info-wrapper
+            width: calc( 100vw - 140px )
 @media screen and ( max-width: 420px)
     .book
         margin-left: 16px
-        white-space: nowrap
         &__name
             margin-left: 10px
-            max-width: 130px
     
