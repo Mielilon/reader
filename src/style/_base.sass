@@ -25,17 +25,17 @@ html:fullscreen
     top: 30px
 @include respond-to(lg)
   html:fullscreen
-    .first-page
-        margin-top: 100px !important
-@include respond-to(xs)
-  html:fullscreen
     .controls
       display: none !important
     .first-page
-        margin-top: 0 !important
+      margin-top: 0 !important
     .reader__page
       margin-top: 0
       margin-bottom: 30px
+    .reader-controls__farther, .reader-controls__closer
+      display: none
+
+    
 
 *
   box-sizing: border-box
