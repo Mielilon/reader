@@ -53,16 +53,6 @@ $(".exit").click(function (event) {
   $('.controls__img-wrapper_active').removeClass('controls__img-wrapper_active')
 })
 
-//открывает модальное окно закладок
-$(".saved-info__img_edit").click(function (event) {
-  const enrtance = $('.bookmark')
-  enrtance.addClass('bookmark__active')
-})
-
-$(".exit").click(function (event) {
-  const enrtance = $('.bookmark')
-  enrtance.removeClass('bookmark__active')
-})
 
 //добавляет контент в блок отсутствия доступа
 $('.get-access__title').click(function() {
@@ -97,24 +87,18 @@ $(document).click(function(e) {
 })
 
 
-//добавляет закладку открывает модальное окно добавления закладки
-$('#save-icon').click(function() {
-  $('.bookmark').addClass('bookmark__active')
-})
-
 //анимация сохранения закладки
-$('.bookmark__button').click(function() {
-  $('.bookmark').removeClass('bookmark__active')
-  $('#modal-content').addClass('modal_active')
-  $('.reader-controls__left').addClass('displaced')
 
-  $('.tabs-buttons__item[data-tab-button="1"]').removeClass('tabs-buttons__item_active')
-  $('.tabs-buttons__item[data-tab-button="2"]').addClass('tabs-buttons__item_active')
+//открытие панели создания закладки
+$('.new-bookmark').click(function() {
+  $('.saved__inputs-wrapper').toggleClass('saved__inputs-wrapper_active')
+  $('.saved-info__item').removeClass('saved-info__item_edit-active')
+  $('.saved-info').toggleClass('saved-info_size-2')
 
-  $('.tabs-content[data-tab-content="1"]').removeClass('tabs-content_active')
-  $('.tabs-content[data-tab-content="2"]').addClass('tabs-content_active')
 
-  $(".reader__page>.saved-icon").addClass('saved-icon_active')
+  $('.saved__button').click(function() {
+    $(".reader__page>.saved-icon").addClass('saved-icon_active')
+  })
 })
 
 //выключает модальное окно при нажатии на экран

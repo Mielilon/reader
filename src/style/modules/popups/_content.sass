@@ -3,31 +3,14 @@
         left: 0
         width: 380px
         height: 100%
-.saved
-    &-info
-        margin-top: 30px
-        padding-right: 20px
-        &__text
-            line-height: 20px
-            width: 230px
-        &__img
-            margin-top: 10px
-            display: none
-        &__item
-            border-bottom: 1px solid #E5E5E5
-            margin-bottom: 12px
-            cursor: pointer
-            display: flex
-            align-items: flex-start
-            &:hover .saved-info__img
-                display: block
-            &:hover .saved-info__text
-                width: 230px
-            &:hover  .saved-wrapper
-                width: 80%
-
+    &__title
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px
 .content-info
-    margin-top: 26px
+    margin-top: 20px
+    overflow-y: auto
+    height: 70vh
     &__item
         margin-bottom: 25px
         cursor: pointer
@@ -48,7 +31,6 @@
         &_open
             &::before
                 background-image: url('./../img/minus.svg')
-        
     &__points
         margin-top: 18px
         margin-left: 40px
@@ -62,7 +44,3 @@
     position: absolute
     left: 0
     top: 2px
-
-.content-info, .saved-info
-    max-height: calc( 55vh + 20px )
-    overflow-y: auto

@@ -1,0 +1,64 @@
+.saved
+    & .popup-background
+        left: 0
+        width: 380px
+        height: 100%
+        padding-top: 32px
+        overflow: hidden
+    &__inputs-wrapper
+        margin: 10px 0 30px
+        display: none
+        &_active
+            display: block
+    &__title
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+        margin-top: 24px
+    &__button
+        padding: 10px 26px
+    &-info
+        margin-top: 20px
+        padding-right: 20px
+        max-height: calc( 100vh - 250px )
+        overflow-y: auto
+        &_size-2
+            max-height: calc( 100vh - 400px )
+        &__text
+            line-height: 20px
+            width: 230px
+        &__img
+            margin-top: 10px
+            display: none
+        &__item
+            border-bottom: 1px solid #E5E5E5
+            margin-bottom: 12px
+            cursor: pointer
+            display: flex
+            align-items: flex-start
+            &:hover .saved-info__img
+                display: block
+            &:hover  .saved-wrapper
+                width: 80%
+            &_edit-active
+                &:hover .saved-info__img
+                    display: none
+                &:hover  .saved-wrapper
+                    width: 100%
+            &_hidden
+                display: none
+
+.new-bookmark
+    display: flex
+    align-items: center
+    cursor: pointer
+    user-select: none
+    &__title
+        margin: 0 12px
+
+@include respond-to(lg)
+    .saved
+        &-info
+            max-height: calc( 100vh - 200px ) 
+            &_size-2
+                max-height: calc( 100vh - 350px )
