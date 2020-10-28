@@ -152,47 +152,29 @@ $('.layout-single').click(function() {
 
 
 //full screen
-var elem = document.querySelector("html")
-//Просмотр в полноэкранном режиме
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) {
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-  } else if (elem.webkitSupportsFullscreen) {
-    elem.webkitEnterFullscreen();
+function toggleFullScreen() {
+  var doc = window.document;
+  var docEl = doc.documentElement;
+  
+  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen;
+  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen;
+  
+  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement) { 
+    requestFullScreen.call(docEl);
   }
-}
-
-//Закрыть полный экран
-function closeFullscreen() {
-  if(document.cancelFullScreen) {
-    document.cancelFullScreen();
-  } else if(document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if(document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
+  else {
+    cancelFullScreen.call(doc);  
   }
 }
 
 $('.format__item_fullscreen').click(function() {
-    openFullscreen();
-})
-
-$('.format__item_fullscreen').click(function() {
- closeFullscreen();
+  toggleFullScreen()
 })
 
 $('.reader-controls__full-screen').click(function() {
-  openFullscreen();
+  toggleFullScreen()
 }) 
 
-$('.reader-controls__full-screen').click(function() {
- closeFullscreen();
-})
 
 //Открытие информации в оглавлении
 $('.content-info__text').click(function() {
@@ -201,8 +183,8 @@ $('.content-info__text').click(function() {
   $(this).toggleClass("content-info__text_open");
 })
 
-//изменение масштаба
 
+//изменение масштаба
 let scaleArray = [
   50,
   75,
