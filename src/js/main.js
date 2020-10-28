@@ -162,6 +162,8 @@ function openFullscreen() {
   } else if (elem.webkitRequestFullscreen) {
     elem.webkitRequestFullscreen();
   } else if (elem.msRequestFullscreen) {
+  } else if (elem.webkitSupportsFullscreen) {
+    elem.webkitEnterFullscreen();
   }
 }
 
@@ -171,8 +173,8 @@ function closeFullscreen() {
     document.cancelFullScreen();
   } else if(document.mozCancelFullScreen) {
     document.mozCancelFullScreen();
-  } else if(document.webkitCancelFullScreen) {
-    document.webkitCancelFullScreen();
+  } else if(document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
   }
 }
 
