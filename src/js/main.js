@@ -155,8 +155,9 @@ $('.format__item_fullscreen').click(function() {
 })
 
 $('.reader-controls__full-screen').click(function() {
-    // $('body').toggleClass('body_fullscreen')
-    toggleFullScreen()
+  if(/iphone/.test(navigator.userAgent)) {
+    $('body').toggleClass('body_fullscreen')
+  } else toggleFullScreen()
 }) 
 
 //Открытие информации в оглавлении
