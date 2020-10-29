@@ -156,12 +156,14 @@ $('.format__item_fullscreen').click(function() {
 
 $('.reader-controls__full-screen').click(function() {
   toggleFullScreen()
+  if(navigator.platform.indexOf("iPhone") != -1) {
+    $('body').toggleClass('body_fullscreen')
+  }
 }) 
 
 
 //Открытие информации в оглавлении
 $('.content-info__text').click(function() {
-  // $(".content-info__points").removeClass("content-info__points_active");
   $(this).siblings(".content-info__points").toggleClass("content-info__points_active");
   $(this).toggleClass("content-info__text_open");
 })
