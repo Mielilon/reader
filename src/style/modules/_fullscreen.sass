@@ -1,0 +1,38 @@
+html:fullscreen
+    body
+        background-color: #C8C8C8
+    .header
+        display: none
+    .controls
+        top: 0
+        &__img-description
+            &:hover
+                &::before
+                    top: 30px
+    .first-page
+        margin-top: 100px
+    .popup-background
+        top: 30px
+
+@include respond-to(lg)
+    html:fullscreen
+        .controls
+            display: none !important
+        .first-page
+            margin-top: 0 !important
+        .reader__page
+            margin-top: 0
+            margin-bottom: 30px
+        .reader-controls__farther, .reader-controls__closer
+            display: none
+//для ios
+    .body_fullscreen
+        .header
+            display: none !important
+        .controls
+            display: none !important
+        .first-page
+            margin-top: 0 !important
+        .reader__page
+            margin-top: 0
+            margin-bottom: 30px

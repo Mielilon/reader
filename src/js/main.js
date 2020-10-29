@@ -145,8 +145,10 @@ function toggleFullScreen() {
   
   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement) { 
     requestFullScreen.call(docEl);
+  } else if(/iphone|ipod|ipad/.test( userAgent )) {
+    $('body').toggleClass("body_fullscreen");
   }
-  else {
+   else {
     cancelFullScreen.call(doc);  
   }
 }
