@@ -155,8 +155,8 @@ $('.format__item_fullscreen').click(function() {
 })
 
 $('.reader-controls__full-screen').click(function() {
-  toggleFullScreen() ||
-  $('body').toggleClass('body_fullscreen')
+    // $('body').toggleClass('body_fullscreen')
+    toggleFullScreen()
 }) 
 
 //Открытие информации в оглавлении
