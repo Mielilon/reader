@@ -156,7 +156,7 @@ $('.format__item_fullscreen').click(function() {
 
 $('.reader-controls__full-screen').click(function() {
   $('body').toggleClass('body_fullscreen')
-  //toggleFullScreen()
+  toggleFullScreen()
 }) 
 
 //Открытие информации в оглавлении
