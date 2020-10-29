@@ -150,8 +150,7 @@
         &__back
             font-size: 11px
         &__tooltip
-            right: 0
-            left: 40px
+            display: none
 @include respond-to(md)
     .header 
         &__info-wrapper
@@ -165,10 +164,6 @@
             flex-direction: column
         &__popup
             width: 180px !important
-    .book
-        &__tooltip
-            right: 20px
-            left: 20px
 @include respond-to(xs)
     .header 
         padding: 10px
