@@ -157,7 +157,7 @@ $('.format__item_fullscreen').click(function() {
 $('.reader-controls__full-screen').click(function() {
   toggleFullScreen()
   if(navigator.platform.indexOf("iPhone") != -1) {
-    $('body').toggleClass('body_fullscreen')
+    $('body').css("background", "red")
   }
 }) 
 
