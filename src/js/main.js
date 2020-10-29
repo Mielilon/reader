@@ -156,9 +156,6 @@ $('.format__item_fullscreen').click(function() {
 
 $('.reader-controls__full-screen').click(function() {
   toggleFullScreen()
-  if(preg_match('/iPhone|iPad|iPod/i', $_SERVER ['HTTP_USER_AGENT'])) {
-    $('body').toggleClass('body_fullscreen')
-  }
 }) 
 
 
