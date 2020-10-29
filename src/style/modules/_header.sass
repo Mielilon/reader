@@ -74,6 +74,25 @@
     overflow: hidden
     text-overflow: ellipsis
     white-space: nowrap
+    &__tooltip
+        position: fixed
+        cursor: default
+        background-color: $white
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15)
+        border-radius: 3px
+        padding: 12px 15px
+        font-size: 12px
+        line-height: 14px
+        color: $dark-grey
+        top: 40px
+        right: 20px
+        left: -200px
+        max-width: 800px
+        margin: auto
+        z-index: 103
+        display: none
+        &_active
+            display: block
     &__back
         font-family: FontAwesome
     &__name
@@ -83,6 +102,7 @@
         overflow: hidden
         text-overflow: ellipsis
         white-space: nowrap
+            
 
 
 
@@ -91,7 +111,16 @@
     .book
         &__name
             max-width: 35vw
-    
+@include respond-to(xxl)
+    .book
+        &__tooltip
+            right: 20px
+            left: 200px
+@include respond-to(xl)
+    .book
+        &__tooltip
+            right: 20px
+            left: 300px
 @include respond-to(lg)
     .header 
         padding: 10px 0
@@ -120,6 +149,9 @@
             margin-left: 5px
         &__back
             font-size: 11px
+        &__tooltip
+            right: 0
+            left: 40px
 @include respond-to(md)
     .header 
         &__info-wrapper
@@ -133,6 +165,10 @@
             flex-direction: column
         &__popup
             width: 180px !important
+    .book
+        &__tooltip
+            right: 20px
+            left: 20px
 @include respond-to(xs)
     .header 
         padding: 10px

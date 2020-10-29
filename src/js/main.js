@@ -145,10 +145,7 @@ function toggleFullScreen() {
   
   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement) { 
     requestFullScreen.call(docEl);
-  } else if(/iphone|ipod|ipad/.test( userAgent )) {
-    $('body').toggleClass("body_fullscreen");
-  }
-   else {
+  } else {
     cancelFullScreen.call(doc);  
   }
 }
@@ -159,6 +156,9 @@ $('.format__item_fullscreen').click(function() {
 
 $('.reader-controls__full-screen').click(function() {
   toggleFullScreen()
+  if(preg_match('/iPhone|iPad|iPod/i', $_SERVER ['HTTP_USER_AGENT'])) {
+    $('body').toggleClass('body_fullscreen')
+  }
 }) 
 
 
@@ -256,3 +256,13 @@ $(".shelf__description").click(function (event) {
   $('.shelf__input-icon').toggleClass("input-icon_active");
   $('.shelf__little-button').toggleClass("shelf__little-button_active");
 })
+
+
+//тултип названия 
+  $(".book").mouseout(function (e) {
+    $('.book__tooltip').addClass("book__tooltip_active");
+  });
+  let bookTooltip = $(".book") && $(".book__tooltip")
+  bookTooltip.mouseleave(function (e) {
+    $('.book__tooltip').removeClass("book__tooltip_active");
+  })
